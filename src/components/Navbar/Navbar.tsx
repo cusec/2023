@@ -2,8 +2,10 @@ import React, { useState, useEffect } from "react";
 import classNames from "classnames";
 import { Link, NavLink } from "react-router-dom";
 import { Button, Paragraph } from "../";
-import CusecLink from "./CusecLink";
+import CusecLink from "../CusecLink/CusecLink";
+import brandLogo from "../../assets/logo.svg";
 import "./Navbar.scss";
+import "../CusecLink/CusecLink.scss";
 
 interface Props {
   authenticated?: boolean;
@@ -59,7 +61,12 @@ const Navbar = ({ authenticated = false }: Props) => {
             to="/"
             style={{ color: "white", textDecoration: "none" }}
           >
-            [ICON HERE]
+            <img
+              src={brandLogo}
+              height={48}
+              alt="CUSEC Logo"
+              className="NavbarLogo"
+            />
           </Link>
           {navbarLinks}
           {authenticated ? (
