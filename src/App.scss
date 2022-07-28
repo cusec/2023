@@ -11,8 +11,9 @@ body {
   --background-subdued: #494949;
   --background-light: #767676;
   --background-dark: #0d0b0d;
-  --font-paragraph: 1.2rem;
-  --font-subheading: 2.5rem;
+  --font-paragraph: 2rem;
+  --font-subheading: 3rem;
+  --font-nav: 1.2rem;
   margin: 0;
   font-family: "Poppins", sans-serif;
 }
@@ -20,4 +21,8 @@ body {
 div {
   margin: 0;
   padding: 0;
+}
+
+.CenterText {
+  text-align: center;
 }

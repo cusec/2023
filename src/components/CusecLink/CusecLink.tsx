@@ -1,9 +1,8 @@
 import React from "react";
 import { NavLink, To, useResolvedPath, useMatch } from "react-router-dom";
 import classNames from "classnames";
-import { Paragraph } from "../";
 
-import "./Navbar.scss";
+import "./CusecLink.scss";
 
 interface Props {
   to: To;
@@ -19,7 +18,7 @@ const CusecLink = ({ to, name }: Props) => {
   return (
     <li>
       <NavLink to={to} style={{ textDecoration: "none" }}>
-        <Paragraph className={className}>{name}</Paragraph>
+        <p className={className}>{name}</p>
       </NavLink>
     </li>
   );
