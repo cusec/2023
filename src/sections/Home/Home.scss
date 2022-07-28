@@ -1,16 +1,23 @@
+body {
+  background: var(--background-dark);
+}
+
 .Home {
-  background-image: url("../../assets/bg-home.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 100% auto;
+  background: radial-gradient(
+      farthest-side at bottom left,
+      #9651fe38,
+      transparent
+    ),
+    radial-gradient(farthest-corner at bottom right, #9651fe38, transparent);
   color: #ffffff;
   min-height: 100vh;
+  padding: 0 10%;
 }
 
 .Container {
   margin: auto;
   padding: 14rem 0;
-  width: 50%;
+  width: 60%;
 }
 
 .Card {
@@ -26,6 +33,7 @@
   border-top: 1px solid rgba(255, 255, 255, 0.5);
   border-left: 1px solid rgba(255, 255, 255, 0.5);
   backdrop-filter: blur(193.84px);
+  z-index: 999;
 }
 
 .Content {
@@ -40,14 +48,32 @@
   }
 }
 
-.Objective {
+.Section {
+  padding: 6% 0;
+
+  .SectionAssets {
+    padding-left: 30px;
+  }
+
+  .SectionContent {
+    padding: 0 3%;
+  }
+}
+
+.InlineSection {
+  display: flex;
+  justify-content: space-between;
+}
+
+.List {
   ol {
     list-style: none;
     counter-reset: item;
+    padding: 3% 0;
 
     li {
       counter-increment: item;
-      margin-bottom: 5px;
+      margin: 30px;
     }
 
     li:before {
@@ -55,11 +81,16 @@
       margin-right: 1rem;
       content: counter(item);
       background: var(--background-subdued);
-      border-radius: 100%;
+      border-radius: 20%;
       color: white;
-      width: 1.5em;
+      width: 2rem;
       text-align: center;
       display: inline-block;
+      font-size: var(--font-nav);
     }
   }
+}
+
+.AboutSubtitle {
+  margin-bottom: 50px;
 }
