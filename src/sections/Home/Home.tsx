@@ -36,7 +36,9 @@ function Home() {
         </div>
       </div>
       <div className="Section InlineSection List">
-        <Image src={natureImg} alt="Nature image" />
+        <div className="SectionImage">
+          <Image src={natureImg} alt="Nature image" />
+        </div>
         <div className="SectionContent">
           <div className="SectionAssets">
             <Subtitle>Our Objectives</Subtitle>
@@ -87,31 +89,32 @@ function Home() {
             </Button>
           </div>
         </div>
-        <Image src={natureImg} alt="Nature image" />
+        <div className="SectionImage">
+          <Image src={natureImg} alt="Nature image" />
+        </div>
       </div>
       <div className="Section">
         <div className="AboutSubtitle">
           <Subtitle>What is CUSEC?</Subtitle>
         </div>
-        <div className="InlineSection">
-          <Image
-            src={natureImg}
-            alt="Nature image"
-            small
-            stagger={Stagger.Bottom}
-          />
-          <Image
-            src={natureImg}
-            alt="Nature image"
-            small
-            stagger={Stagger.Top}
-          />
-          <Image
-            src={natureImg}
-            alt="Nature image"
-            small
-            stagger={Stagger.Bottom}
-          />
+        <div className="ImageRow">
+          <div className="ImageColumn">
+            <Image
+              src={natureImg}
+              alt="Nature image"
+              stagger={Stagger.Bottom}
+            />
+          </div>
+          <div className="ImageColumn">
+            <Image src={natureImg} alt="Nature image" stagger={Stagger.Top} />
+          </div>
+          <div className="ImageColumn">
+            <Image
+              src={natureImg}
+              alt="Nature image"
+              stagger={Stagger.Bottom}
+            />
+          </div>
         </div>
       </div>
       <div className="Section List">

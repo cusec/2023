@@ -28,3 +28,19 @@ div {
 .CenterText {
   text-align: center;
 }
+
+@media screen and (max-width: 768px) {
+  body {
+    --font-paragraph: 1.5rem;
+    --font-subheading: 2.5rem;
+    --font-nav: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  body {
+    --font-paragraph: 1.3rem;
+    --font-subheading: 2rem;
+    --font-nav: 1.3rem;
+  }
+}

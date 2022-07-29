@@ -58,6 +58,10 @@ body {
   .SectionContent {
     padding: 0 3%;
   }
+
+  .SectionImage {
+    max-width: 35%;
+  }
 }
 
 .InlineSection {
@@ -93,4 +97,39 @@ body {
 
 .AboutSubtitle {
   margin-bottom: 50px;
+}
+
+.ImageRow {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+
+  .ImageColumn {
+    -ms-flex: 25%;
+    flex: 25%;
+    max-width: 25%;
+
+    img {
+      vertical-align: middle;
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .ImageColumn {
+    -ms-flex: 30%;
+    flex: 30%;
+    max-width: 30%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .ImageColumn {
+    -ms-flex: 100%;
+    flex: 100%;
+    max-width: 100%;
+  }
 }
