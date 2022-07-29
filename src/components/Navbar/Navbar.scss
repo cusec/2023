@@ -19,20 +19,18 @@
 .Navbar {
   padding: 2% 10%;
   display: flex;
-  // justify-content: space-between;
+  justify-content: space-between;
 }
 
 .NavItemList {
   display: flex;
   align-items: center;
   flex-direction: row;
-  padding: 9;
   float: right;
   list-style-type: none;
 }
 
 .NavbarLogo {
-  margin-right: 100px;
   position: relative;
   top: 50%;
   transform: translateY(-50%);
@@ -58,7 +56,7 @@
   }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 768px) {
   .HamburgerIcon {
     display: block;
   }
