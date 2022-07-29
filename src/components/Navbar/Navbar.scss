@@ -19,7 +19,7 @@
 .Navbar {
   padding: 2% 10%;
   display: flex;
-  justify-content: space-between;
+  // justify-content: space-between;
 }
 
 .NavItemList {
@@ -33,4 +33,49 @@
 
 .NavbarLogo {
   margin-right: 100px;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.HamburgerIcon {
+  border: 0;
+  height: 40px;
+  width: 40px;
+  padding: 0.5rem;
+  border-radius: 50%;
+  background-color: var(--primary-dark);
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  position: absolute;
+  top: 50%;
+  right: 25px;
+  transform: translateY(-50%);
+  display: none;
+
+  &:hover {
+    background-color: lighten(#9353ff, 10%);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .HamburgerIcon {
+    display: block;
+  }
+
+  .NavList > ul {
+    flex-direction: column;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 50px);
+    background-color: var(--background-dark);
+    border-top: 1px solid black;
+    display: none;
+  }
+
+  .Mobile > ul {
+    display: block;
+  }
 }

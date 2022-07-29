@@ -20,12 +20,6 @@ const Footer = () => {
   return (
     <div className="FooterWrapper">
       <div className="Wrapper">
-        <img
-          src={brandLogo}
-          height={48}
-          alt="CUSEC Logo"
-          className="NavbarLogo"
-        />
         <ul className="NavItemList">{footerLinks}</ul>
       </div>
     </div>
