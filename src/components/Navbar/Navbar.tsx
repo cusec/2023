@@ -1,18 +1,14 @@
 import React, { useState, useEffect } from "react";
 import classNames from "classnames";
-import { Link, NavLink } from "react-router-dom";
-import { Button, Paragraph } from "../";
+import { Link } from "react-router-dom";
 import CusecLink from "../CusecLink/CusecLink";
 import brandLogo from "../../assets/logo.svg";
 import "./Navbar.scss";
 import "../CusecLink/CusecLink.scss";
 
-interface Props {
-  authenticated?: boolean;
-}
-
-const Navbar = ({ authenticated = false }: Props) => {
+const Navbar = () => {
   const [solidNav, setSolidNav] = useState(false);
+  const [showMobileNav, setShowMobileNav] = useState(false);
 
   useEffect(() => {
     document.addEventListener("scroll", () => {
@@ -24,10 +20,7 @@ const Navbar = ({ authenticated = false }: Props) => {
     });
   }, []);
 
-  const handleSignOut = () => {};
-
-  const signedIn = [{ name: "Home", link: "/" }];
-  const signedOut = [
+  const links = [
     { name: "Home", link: "/" },
     { name: "Services", link: "/services" },
     { name: "Sponsors", link: "/sponsors" },
@@ -35,17 +28,14 @@ const Navbar = ({ authenticated = false }: Props) => {
     { name: "FAQ", link: "/faq" },
   ];
 
-  let links;
-
-  if (authenticated) {
-    links = signedIn;
-  } else {
-    links = signedOut;
-  }
-
   const className = classNames(
     "NavWrapper",
     solidNav ? "Solid" : "Transparent"
+  );
+
+  const navbarLinkClassName = classNames(
+    "NavList",
+    showMobileNav ? "Mobile" : null
   );
 
   const navbarLinks = links.map(({ link, name }) => {
@@ -55,29 +45,25 @@ const Navbar = ({ authenticated = false }: Props) => {
   return (
     <div className={className}>
       <div className="Navbar">
-        <ul className="NavItemList">
-          <Link
-            key="icon"
-            to="/"
-            style={{ color: "white", textDecoration: "none" }}
-          >
-            <img
-              src={brandLogo}
-              height={48}
-              alt="CUSEC Logo"
-              className="NavbarLogo"
-            />
-          </Link>
-          {navbarLinks}
-          {authenticated ? (
-            <NavLink key="signout" to="#" onClick={handleSignOut}>
-              <li className="NavItem">
-                <Paragraph>Sign Out</Paragraph>
-              </li>
-            </NavLink>
-          ) : null}
-        </ul>
-        <Button plain>Sign Up</Button>
+        <Link key="icon" to="/">
+          <img
+            src={brandLogo}
+            height={48}
+            alt="CUSEC Logo"
+            className="NavbarLogo"
+          />
+        </Link>
+        <button
+          className="HamburgerIcon"
+          onClick={() => {
+            setShowMobileNav(!showMobileNav);
+          }}
+        >
+          !
+        </button>
+        <div className={navbarLinkClassName}>
+          <ul className="NavItemList">{navbarLinks}</ul>
+        </div>
       </div>
     </div>
   );

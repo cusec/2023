@@ -1,15 +1,7 @@
 .Wrapper {
   display: flex;
-  justify-content: space-between;
+  justify-content: end;
   background-color: var(--background-dark);
   color: white;
   padding: 2% 10%;
 }
-
-// const AboutDiv = styled.div`
-//   width: 60%;
-// `;
-
-// const StyledSpan = styled.span`
-//     cursor: pointer;
-// `;
