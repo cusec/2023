@@ -15,15 +15,18 @@ body {
 }
 
 .Container {
+  position: relative;
   margin: auto;
-  padding: 14rem 0;
   width: 60%;
+  height: 100vh;
 }
 
 .Card {
   position: relative;
   z-index: 2;
-  margin: -50px;
+  left: 50%;
+  top:50%;
+  transform: translate(-50%, -50%);
 
   &::before{
     content: "";
