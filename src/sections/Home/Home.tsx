@@ -17,8 +17,8 @@ function Home() {
   return (
     <div className="Home">
       <div className="Container">
-        <div className="Card" ref={tilt}>
-          <div className="Content">
+        <div className="Card" >
+          <div className="Content" ref={tilt}>
             <Subtitle showLogo>CUSEC 2023</Subtitle>
             <Paragraph className="CardText">
               Canadian University Software Engineering Conference January 2022 •
