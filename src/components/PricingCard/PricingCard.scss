@@ -1,0 +1,116 @@
+.PricingCard {
+  display: block;
+  width: 40%;
+  max-width: 350px;
+  padding: 8px;
+  background-color: #ffffff;
+  border-radius: 20px;
+  color: black;
+  margin-top: 50px;
+
+  h2 {
+    text-align: center;
+  }
+
+  p {
+    text-align: center;
+    color: #a6a6a6;
+  }
+
+  .Icon {
+    color: #9353ff;
+    padding-right: 20px;
+    font-size: 20px;
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 30px;
+    padding: 35px;
+    border-radius: 20px;
+    line-height: 40px;
+    background-color: #f9fafb;
+  }
+}
+
+.PriceContainer {
+  display: flex;
+  justify-content: center;
+
+  .Wrapper {
+    border-radius: 50%;
+    padding: 2px;
+    background-color: white;
+    color: black;
+
+    .WrapperContent {
+      height: 100%;
+      width: 100%;
+      text-align: center;
+      position: relative;
+
+      .DollarSign {
+        font-size: 20px;
+        font-weight: 400;
+        position: absolute;
+        top: 17px;
+      }
+
+      .Price {
+        font-size: 45px;
+        font-weight: 600;
+        margin-left: 16px;
+      }
+    }
+  }
+}
+
+.Vip {
+  color: white;
+  background-image: radial-gradient(
+      circle at bottom center,
+      transparent 76%,
+      #9353ff 76%
+    ),
+    linear-gradient(180deg, #8c8673 0%, #b4a985 60%, #9353ff 100%);
+
+  p {
+    text-align: center;
+    color: white;
+  }
+
+  ul {
+    background-color: #ffffff;
+    color: black;
+  }
+
+  .Wrapper {
+    background-color: transparent;
+    color: white;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .PricingCard {
+    width: 100%;
+
+    ul {
+      margin: 10px;
+      padding: 15px;
+    }
+  }
+
+  .Vip {
+    background-image: radial-gradient(
+        circle at bottom center,
+        transparent 70%,
+        #9353ff 70%
+      ),
+      linear-gradient(
+        180deg,
+        rgb(140, 134, 115) 0%,
+        rgb(180, 169, 133) 50%,
+        #9353ff 100%
+      );
+  }
+}
