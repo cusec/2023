@@ -70,7 +70,7 @@ const Navbar = ({ onFaq }: Props) => {
         <div className={navbarLinkClassName}>
           <ul className="NavItemList">{navbarLinks}</ul>
         </div>
-        <button className="signUpButton">Sign Up</button>
+        <button className="SignUpButton">Sign Up</button>
       </div>
     </div>
   );
