@@ -64,9 +64,7 @@ const Navbar = () => {
         <div className={navbarLinkClassName}>
           <ul className="NavItemList">{navbarLinks}</ul>
         </div>
-        <button className="signupbutton">
-          Sign Up
-        </button>
+        <button className="signupbutton">Sign Up</button>
       </div>
     </div>
   );
