@@ -10,7 +10,12 @@ body {
     ),
     radial-gradient(farthest-corner at bottom right, #9651fe38, transparent);
   color: #ffffff;
-  padding: 0 18%;
+  min-height: 100vh;
+  padding: 0 10%;
+}
+
+.Home > div {
+  height: 100vh;
 }
 
 .Container {

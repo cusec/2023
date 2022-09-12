@@ -56,23 +56,30 @@
   }
 }
 
-.signupbutton{
-  margin:10px;
+.signupbutton {
+  margin: 10px;
   height: 63px;
   border-radius: 98px;
   padding-left: 98px;
   padding-right: 98px;
   border-color: white;
   font-size: 20px;
-  color:white;
-  background: linear-gradient(224.96deg, #0D0B0D 42.25%, rgba(13, 11, 12, 0) 87.58%);
-  
+  color: white;
+  background: linear-gradient(
+    224.96deg,
+    #0d0b0d 42.25%,
+    rgba(13, 11, 12, 0) 87.58%
+  );
 }
 
-.signupbutton:hover{
-  background: linear-gradient(276.71deg, #DAFF01 -9.77%, #AC8DDF 30.75%, #9353FF 88.91%);
+.signupbutton:hover {
+  background: linear-gradient(
+    276.71deg,
+    #daff01 -9.77%,
+    #ac8ddf 30.75%,
+    #9353ff 88.91%
+  );
 }
-
 
 @media screen and (max-width: 768px) {
   .HamburgerIcon {
@@ -90,8 +97,6 @@
     border-top: 1px solid black;
     display: none;
   }
-
-  
 
   .Mobile > ul {
     display: block;
