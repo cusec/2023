@@ -64,33 +64,56 @@
 }
 
 .signUpButton {
+  box-sizing:border-box;
+  margin-top: 10px;
+  position: relative;
   margin-left: auto;
   height: 63px;
   border-radius: 98px;
   padding-left: 98px;
   padding-right: 98px;
-  border-color: white;
+  border: 2px solid white;
+  cursor: pointer;
   font-size: 20px;
   color: white;
-  background: linear-gradient(
-    224.96deg,
-    #0d0b0d 42.25%,
-    rgba(13, 11, 12, 0) 87.58%
-  );
+  background: transparent;
 }
+
 @media only screen and (max-width: 768px) {
-  .signUpButton {
+  .SignUpButton {
     display: none;
   }
 }
 
-.signUpButton:hover {
+.SignUpButton::before {
+  content: "";
+  position: absolute;
+  border-radius: 98px;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  height: 100%;
   background: linear-gradient(
     276.71deg,
     #daff01 -9.77%,
     #ac8ddf 30.75%,
     #9353ff 88.91%
   );
+}
+
+.SignUpButton:hover:before {
+  animation: flow 0.5s ease-out;
+  width: 100%;
+}
+
+@keyframes flow {
+  from{
+    width:0;
+  }
+  to{
+    width: 100%;
+  }
+
 }
 
 @media screen and (max-width: 768px) {
