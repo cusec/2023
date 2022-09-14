@@ -12,21 +12,21 @@ interface Props {
 
 const PricingCard = ({ title, helpText, price, features, vip }: Props) => {
   const className = classNames("PricingCard", vip ? "Vip" : null);
-  const featureList = features.map((feature: string) => {
+  const formattedFeatures = features.map((feature: string) => {
     return (
-      <li>
+      <>
         <span className="Icon">
           <i className="fa-solid fa-circle-check"></i>
         </span>
-        {feature}
-      </li>
+        <p className="FeatureName">{feature}</p>
+      </>
     );
   });
 
   return (
     <div className={className}>
       <h2>{title}</h2>
-      <p>{helpText}</p>
+      <p className="HelpText">{helpText}</p>
       <div className="PriceContainer">
         <div className="Wrapper">
           <div className="WrapperContent">
@@ -35,7 +35,7 @@ const PricingCard = ({ title, helpText, price, features, vip }: Props) => {
           </div>
         </div>
       </div>
-      <ul>{featureList}</ul>
+      <div className="Features">{formattedFeatures}</div>
     </div>
   );
 };

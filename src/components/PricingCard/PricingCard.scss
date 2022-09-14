@@ -6,29 +6,41 @@
   background-color: #ffffff;
   border-radius: 20px;
   color: black;
-  margin-top: 50px;
+  margin: 50px 50px 0 0;
+  align-self: center;
 
   h2 {
     text-align: center;
+    margin-bottom: 0;
   }
 
   p {
     text-align: center;
     color: #a6a6a6;
+
+    &.HelpText {
+      margin: 0 80px;
+    }
   }
 
   .Icon {
     color: #9353ff;
-    padding-right: 20px;
     font-size: 20px;
+    justify-self: center;
+    align-self: center;
   }
 
-  ul {
-    list-style-type: none;
-    margin: 30px;
-    padding: 35px;
+  .FeatureName {
+    text-align: left;
+    justify-self: start;
+  }
+
+  .Features {
+    display: grid;
+    grid-template-columns: 1fr 80%;
+    margin: 20px 30px 30px 30px;
+    padding: 25px;
     border-radius: 20px;
-    line-height: 40px;
     background-color: #f9fafb;
   }
 }
@@ -69,19 +81,22 @@
   color: white;
   background-image: radial-gradient(
       circle at bottom center,
-      transparent 76%,
-      #9353ff 76%
+      transparent 74%,
+      #9353ff 74%
     ),
     linear-gradient(180deg, #8c8673 0%, #b4a985 60%, #9353ff 100%);
+  padding: 50px 0;
 
   p {
     text-align: center;
     color: white;
   }
 
-  ul {
+  .Features {
     background-color: #ffffff;
-    color: black;
+    p {
+      color: black;
+    }
   }
 
   .Wrapper {
@@ -90,21 +105,22 @@
   }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 952px) {
   .PricingCard {
     width: 100%;
+    margin: 50px 0 0 0;
 
-    ul {
-      margin: 10px;
-      padding: 15px;
+    .Features {
+      margin: 30px;
+      padding: 20px;
     }
   }
 
   .Vip {
     background-image: radial-gradient(
         circle at bottom center,
-        transparent 70%,
-        #9353ff 70%
+        transparent 76%,
+        #9353ff 76%
       ),
       linear-gradient(
         180deg,
@@ -112,5 +128,6 @@
         rgb(180, 169, 133) 50%,
         #9353ff 100%
       );
+    padding: 0;
   }
 }
