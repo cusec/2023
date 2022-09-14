@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import classNames from "classnames";
 import { Link } from "react-router-dom";
 import CusecLink from "../CusecLink/CusecLink";
-import brandLogo from "../../assets/newLogo.png";
+import brandLogo from "../../assets/logo.png";
 import "./Navbar.scss";
 import "../CusecLink/CusecLink.scss";
 

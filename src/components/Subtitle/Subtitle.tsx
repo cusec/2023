@@ -1,5 +1,5 @@
 import React from "react";
-import brandLogo from "../../assets/newLogo.png";
+import brandLogo from "../../assets/logo.png";
 import "./Subtitle.scss";
 
 interface Props {
