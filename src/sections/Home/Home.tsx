@@ -4,6 +4,7 @@ import { Button, Subtitle, Paragraph, Image } from "../../components";
 import { Stagger } from "../../types";
 import natureImg from "../../assets/nature.jpeg";
 import "./Home.scss";
+import InteractiveButton from "../../components/InteractiveButton/InteractiveButton";
 
 function Home() {
   const tilt = useRef<HTMLDivElement>(null);
@@ -84,9 +85,10 @@ function Home() {
             </li>
           </ol>
           <div className="SectionAssets">
-            <Button colorBorder inline>
+            {/* <Button colorBorder inline>
               Connect
-            </Button>
+            </Button> */}
+            <InteractiveButton link="http://www.google.com" text="Connect"/>
           </div>
         </div>
         <div className="SectionImage">
