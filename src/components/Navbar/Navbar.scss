@@ -19,7 +19,10 @@
 .Navbar {
   padding: 2% 10%;
   display: flex;
-  justify-content: space-between;
+  justify-content: left;
+  width: 100%;
+  box-sizing: border-box;
+  position: absolute;
 }
 
 .NavItemList {
@@ -28,6 +31,10 @@
   flex-direction: row;
   float: right;
   list-style-type: none;
+}
+
+.NavItemList > li:last-child {
+  display: none;
 }
 
 .NavbarLogo {
@@ -56,7 +63,8 @@
   }
 }
 
-.signupbutton {
+.signUpButton {
+  margin-left: auto;
   margin: 10px;
   height: 63px;
   border-radius: 98px;
@@ -71,8 +79,13 @@
     rgba(13, 11, 12, 0) 87.58%
   );
 }
+@media only screen and (max-width: 768px) {
+  .signUpButton {
+    display: none;
+  }
+}
 
-.signupbutton:hover {
+.signUpButton:hover {
   background: linear-gradient(
     276.71deg,
     #daff01 -9.77%,
@@ -90,12 +103,16 @@
     flex-direction: column;
     position: absolute;
     top: 50px;
-    left: 0;
+    left: -15px;
     width: 100%;
     height: calc(100vh - 50px);
     background-color: var(--background-dark);
     border-top: 1px solid black;
     display: none;
+  }
+
+  .NavItemList > li:last-child {
+    display: list-item;
   }
 
   .Mobile > ul {
