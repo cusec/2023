@@ -1,6 +1,12 @@
 import React, { useEffect, useRef } from "react";
 import VanillaTilt from "vanilla-tilt";
-import { Button, Subtitle, Paragraph, Image } from "../../components";
+import {
+  Button,
+  Subtitle,
+  Paragraph,
+  Image,
+  PricingCard,
+} from "../../components";
 import { Stagger } from "../../types";
 import natureImg from "../../assets/nature.jpeg";
 import "./Home.scss";
@@ -17,7 +23,7 @@ function Home() {
   return (
     <div className="Home">
       <div className="Container">
-        <div className="Card" >
+        <div className="Card">
           <div className="Content" ref={tilt}>
             <Subtitle showLogo>CUSEC 2023</Subtitle>
             <Paragraph className="CardText">
@@ -135,6 +141,46 @@ function Home() {
               <Paragraph inline>Lorem ipsum dolor sit amet</Paragraph>
             </li>
           </ol>
+        </div>
+      </div>
+      <div className="Section">
+        <div className="CenterText">
+          <Subtitle>Join us at CUSEC 2023</Subtitle>
+        </div>
+        <div className="SectionContent">
+          <div className="CenterText">
+            <Paragraph inline>
+              Choose the plan that works best for you. Feel free to contact us
+              for further questions!
+            </Paragraph>
+          </div>
+          <div className="PricingCards">
+            <PricingCard
+              title="Basic"
+              helpText="Have a go and experience CUSEC"
+              price={2}
+              features={[
+                "Hopin Virtual Conference",
+                "Discord Access",
+                "Social Events",
+                "Networking Perks",
+                "Talks and Workshops",
+              ]}
+            />
+            <PricingCard
+              title="VIP"
+              helpText="Experience the exclusivity of VIP"
+              price={35}
+              features={[
+                "All Basic Benefits",
+                "In-person Event",
+                "Exclusive CUSEC Merch",
+                "Food + Snacks",
+                "And more!",
+              ]}
+              vip
+            />
+          </div>
         </div>
       </div>
     </div>
