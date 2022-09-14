@@ -26,6 +26,7 @@ const Navbar = () => {
     { name: "Sponsors", link: "/sponsors" },
     { name: "Team", link: "/team" },
     { name: "FAQ", link: "/faq" },
+    { name: "Sign Up", link: "/signup" },
   ];
 
   const className = classNames(
@@ -64,7 +65,7 @@ const Navbar = () => {
         <div className={navbarLinkClassName}>
           <ul className="NavItemList">{navbarLinks}</ul>
         </div>
-        <button className="signupbutton">Sign Up</button>
+        <button className="signUpButton">Sign Up</button>
       </div>
     </div>
   );
