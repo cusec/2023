@@ -125,7 +125,7 @@ class Point {
 }
 
 const renderCanvas = () => {
-  const rafID: number = requestAnimationFrame(renderCanvas);
+ requestAnimationFrame(renderCanvas);
 
   context.clearRect(0, 0, canvas.width, canvas.height);
   context.fillStyle = "#281434";
@@ -167,7 +167,7 @@ const renderCanvas = () => {
   for (let j = 0; j <= 1; j++) {
     const points: Point[] = groups[j];
 
-    if (j == 0) {
+    if (j === 0) {
       context.fillStyle = '#eefca2';
     } else {
       context.fillStyle = gradient;
@@ -179,9 +179,8 @@ const renderCanvas = () => {
     for (let i = 0; i < points.length; i++) {
       const p: Point = points[i];
       let nextP: Point = points[i + 1];
-      const val: number = 30 * 0.552284749831;
 
-      if (nextP != undefined) {
+      if (nextP !== undefined) {
         p.cx1 = (p.x + nextP.x) / 2;
         p.cy1 = (p.y + nextP.y) / 2;
         p.cx2 = (p.x + nextP.x) / 2;
