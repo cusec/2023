@@ -1,12 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import VanillaTilt from "vanilla-tilt";
-import {
-  Button,
-  Subtitle,
-  Paragraph,
-  Image,
-  PricingCard,
-} from "../../components";
+import { Button, Subtitle, Paragraph, Image } from "../../components";
+import { PricingCard } from "./components";
 import { Stagger } from "../../types";
 import natureImg from "../../assets/nature.jpeg";
 import "./Home.scss";
