@@ -85,9 +85,6 @@ function Home() {
             </li>
           </ol>
           <div className="SectionAssets">
-            {/* <Button colorBorder inline>
-              Connect
-            </Button> */}
             <InteractiveButton link="http://www.google.com" text="Connect"/>
           </div>
         </div>
