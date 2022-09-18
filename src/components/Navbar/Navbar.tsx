@@ -59,7 +59,7 @@ const Navbar = () => {
             setShowMobileNav(!showMobileNav);
           }}
         >
-          !
+          <i className="fa-solid fa-bars"></i>
         </button>
         <div className={navbarLinkClassName}>
           <ul className="NavItemList">{navbarLinks}</ul>
