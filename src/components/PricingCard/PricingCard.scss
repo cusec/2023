@@ -1,0 +1,133 @@
+.PricingCard {
+  display: block;
+  width: 40%;
+  max-width: 350px;
+  padding: 8px;
+  background-color: #ffffff;
+  border-radius: 20px;
+  color: black;
+  margin: 50px 50px 0 0;
+  align-self: center;
+
+  h2 {
+    text-align: center;
+    margin-bottom: 0;
+  }
+
+  p {
+    text-align: center;
+    color: #a6a6a6;
+
+    &.HelpText {
+      margin: 0 80px;
+    }
+  }
+
+  .Icon {
+    color: #9353ff;
+    font-size: 20px;
+    justify-self: center;
+    align-self: center;
+  }
+
+  .FeatureName {
+    text-align: left;
+    justify-self: start;
+  }
+
+  .Features {
+    display: grid;
+    grid-template-columns: 1fr 80%;
+    margin: 20px 30px 30px 30px;
+    padding: 25px;
+    border-radius: 20px;
+    background-color: #f9fafb;
+  }
+}
+
+.PriceContainer {
+  display: flex;
+  justify-content: center;
+
+  .Wrapper {
+    border-radius: 50%;
+    padding: 2px;
+    background-color: white;
+    color: black;
+
+    .WrapperContent {
+      height: 100%;
+      width: 100%;
+      text-align: center;
+      position: relative;
+
+      .DollarSign {
+        font-size: 20px;
+        font-weight: 400;
+        position: absolute;
+        top: 17px;
+      }
+
+      .Price {
+        font-size: 45px;
+        font-weight: 600;
+        margin-left: 16px;
+      }
+    }
+  }
+}
+
+.Vip {
+  color: white;
+  background-image: radial-gradient(
+      circle at bottom center,
+      transparent 74%,
+      #9353ff 74%
+    ),
+    linear-gradient(180deg, #8c8673 0%, #b4a985 60%, #9353ff 100%);
+  padding: 50px 0;
+
+  p {
+    text-align: center;
+    color: white;
+  }
+
+  .Features {
+    background-color: #ffffff;
+    p {
+      color: black;
+    }
+  }
+
+  .Wrapper {
+    background-color: transparent;
+    color: white;
+  }
+}
+
+@media screen and (max-width: 952px) {
+  .PricingCard {
+    width: 100%;
+    margin: 50px 0 0 0;
+
+    .Features {
+      margin: 30px;
+      padding: 20px;
+    }
+  }
+
+  .Vip {
+    background-image: radial-gradient(
+        circle at bottom center,
+        transparent 76%,
+        #9353ff 76%
+      ),
+      linear-gradient(
+        180deg,
+        rgb(140, 134, 115) 0%,
+        rgb(180, 169, 133) 50%,
+        #9353ff 100%
+      );
+    padding: 0;
+  }
+}

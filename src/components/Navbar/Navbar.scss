@@ -63,7 +63,7 @@
   }
 }
 
-.signUpButton {
+.SignUpButton {
   margin-left: auto;
   height: 63px;
   border-radius: 98px;
@@ -78,13 +78,14 @@
     rgba(13, 11, 12, 0) 87.58%
   );
 }
+
 @media only screen and (max-width: 768px) {
-  .signUpButton {
+  .SignUpButton {
     display: none;
   }
 }
 
-.signUpButton:hover {
+.SignUpButton:hover {
   background: linear-gradient(
     276.71deg,
     #daff01 -9.77%,
