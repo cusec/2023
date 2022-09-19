@@ -6,15 +6,15 @@ interface Props {
   inline?: boolean;
   bold?: boolean;
   className?: string;
-  hoverFN?: (text: string) => void;
+  onHover?: (text: string) => void;
   children: string;
 }
 
-const Paragraph = ({ inline, bold, className, children, hoverFN }: Props) => {
+const Paragraph = ({ inline, bold, className, children, onHover }: Props) => {
   const styles = classNames("Paragraph", bold ? "Bold" : null, className);
   const hover = (text: string) => {
-    if (hoverFN) {
-      hoverFN(text);
+    if (onHover) {
+      onHover(text);
     }
   };
 

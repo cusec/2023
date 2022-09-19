@@ -72,13 +72,13 @@ function Home() {
           </div>
           <ol>
             <li>
-              <Paragraph inline bold className="Underline" hoverFN={hoverText}>
+              <Paragraph inline bold className="Underline" onHover={hoverText}>
                 Learn
               </Paragraph>
               <Paragraph inline> from world renowned experts</Paragraph>
             </li>
             <li>
-              <Paragraph inline bold className="Underline" hoverFN={hoverText}>
+              <Paragraph inline bold className="Underline" onHover={hoverText}>
                 Connect
               </Paragraph>
               <Paragraph inline> with like-minded students</Paragraph>
@@ -88,7 +88,7 @@ function Home() {
                 className="Underline"
                 inline
                 bold
-                hoverFN={hoverText}
+                onHover={hoverText}
               >
                 Discover
               </Paragraph>
