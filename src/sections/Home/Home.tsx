@@ -72,7 +72,7 @@ function Home() {
           </div>
           <ol>
             <li>
-              <Paragraph inline bold hoverFN={hoverText}>
+              <Paragraph inline bold className="Underline" hoverFN={hoverText}>
                 Learn
               </Paragraph>
               <Paragraph inline> from world renowned experts</Paragraph>
@@ -85,7 +85,7 @@ function Home() {
             </li>
             <li>
               <Paragraph
-                className="objectivesHover"
+                className="Underline"
                 inline
                 bold
                 hoverFN={hoverText}
