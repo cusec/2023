@@ -4,11 +4,36 @@ import { Button, Subtitle, Paragraph, Image } from "../../components";
 import { PricingCard } from "./components";
 import { Stagger } from "../../types";
 import natureImg from "../../assets/nature.jpeg";
+import connectImage from "../../assets/connect.png";
+import learnImage from "../../assets/learn.png";
+import discoverImage from "../../assets/discover.png";
 import "./Home.scss";
 import InteractiveButton from "../../components/InteractiveButton/InteractiveButton";
 
 function Home() {
   const tilt = useRef<HTMLDivElement>(null);
+  const imageRef = useRef<HTMLDivElement>(null);
+
+  const hoverText = (text: string) => {
+    const image: HTMLImageElement = imageRef?.current
+      ?.firstChild as HTMLImageElement;
+
+    if (!image.src) {
+      return;
+    }
+    
+    switch (text) {
+      case "Learn":
+        image.src = learnImage;
+        break;
+      case "Connect":
+        image.src = connectImage;
+        break;
+      case "Discover":
+        image.src = discoverImage;
+        break;
+    }
+  };
 
   useEffect(() => {
     if (!tilt.current) return;
@@ -38,8 +63,8 @@ function Home() {
         </div>
       </div>
       <div className="Section InlineSection List">
-        <div className="SectionImage">
-          <Image src={natureImg} alt="Nature image" />
+        <div className="SectionImage" ref={imageRef}>
+          <Image src={learnImage} alt="Learn image" />
         </div>
         <div className="SectionContent">
           <div className="SectionAssets">
@@ -47,19 +72,24 @@ function Home() {
           </div>
           <ol>
             <li>
-              <Paragraph inline bold>
+              <Paragraph inline bold hoverFN={hoverText}>
                 Learn
               </Paragraph>
               <Paragraph inline> from world renowned experts</Paragraph>
             </li>
             <li>
-              <Paragraph inline bold className="Underline">
+              <Paragraph inline bold className="Underline" hoverFN={hoverText}>
                 Connect
               </Paragraph>
               <Paragraph inline> with like-minded students</Paragraph>
             </li>
             <li>
-              <Paragraph inline bold>
+              <Paragraph
+                className="objectivesHover"
+                inline
+                bold
+                hoverFN={hoverText}
+              >
                 Discover
               </Paragraph>
               <Paragraph inline> opportunities with many companies</Paragraph>
@@ -86,7 +116,7 @@ function Home() {
             </li>
           </ol>
           <div className="SectionAssets">
-            <InteractiveButton link="http://www.google.com" text="Connect"/>
+            <InteractiveButton link="http://www.google.com" text="Connect" />
           </div>
         </div>
         <div className="SectionImage">
