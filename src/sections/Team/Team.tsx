@@ -1,7 +1,4 @@
-import React from "react";
 import "./Team.scss";
-import { Route, Routes } from "react-router-dom";
-import { Link } from "react-router-dom";
 import Paragraph from "../../components/Paragraph/Paragraph";
 import Subtitle from "../../components/Subtitle/Subtitle";
 
