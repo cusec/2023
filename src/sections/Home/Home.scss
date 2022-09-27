@@ -10,13 +10,13 @@ body {
     ),
     radial-gradient(farthest-corner at bottom right, #9651fe38, transparent);
   color: #ffffff;
-  padding: 0 10%;
+  padding: 0 18%;
 }
 
 .Container {
   position: relative;
   margin: auto;
-  width: 60%;
+  width: 80%;
   height: 100vh;
 }
 
@@ -33,7 +33,7 @@ body {
     position: absolute;
     display: block;
     top: -45%;
-    left: -10%;
+    left: -20%;
     height: 19.5rem;
     width: 19.5rem;
     border-radius: 50%;
@@ -50,8 +50,8 @@ body {
     z-index: -2;
     position: absolute;
     display: block;
-    top: 10%;
-    right: -10%;
+    top: 30%;
+    right: -30%;
     height: 26.5rem;
     width: 26.5rem;
     border-radius: 50%;
