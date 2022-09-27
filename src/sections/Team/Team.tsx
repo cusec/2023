@@ -1,6 +1,17 @@
 import "./Team.scss";
 import Paragraph from "../../components/Paragraph/Paragraph";
 import Subtitle from "../../components/Subtitle/Subtitle";
+import ExpandableDiv from "./components/ExpandableDiv";
+
+const members: string[] = [
+  "Chairs",
+  "Logistics Team",
+  "Sponsorship Team",
+  "Speakers Team",
+  "Technology Team",
+  "Events Team",
+  "Promotions Team",
+];
 
 function Team() {
   return (
@@ -12,52 +23,11 @@ function Team() {
           different parts of CUSEC.
         </Paragraph>
         <div className="Category">
-          
-          <ol>
-            <li className="roundedList">
-            <div className="plusCircle">+</div>
-              <Paragraph inline className="Position">
-                Chairs
-              </Paragraph>
-            </li>
-            <li className="roundedList">
-            <div className="plusCircle">+</div>
-              <Paragraph inline className="Position">
-                Logistics Team
-              </Paragraph>
-            </li>
-            <li className="roundedList">
-            <div className="plusCircle">+</div>
-              <Paragraph inline className="Position">
-                Sponsorship Team
-              </Paragraph>
-            </li>
-            <li className="roundedList">
-            <div className="plusCircle">+</div>
-              <Paragraph inline className="Position">
-                Speakers Team
-              </Paragraph>
-            </li>
-            <li className="roundedList">
-            <div className="plusCircle">+</div>
-              <Paragraph inline className="Position">
-                Technology Team
-              </Paragraph>
-             
-            </li>
-            <li className="roundedList">
-            <div className="plusCircle">+</div>
-              <Paragraph inline className="Position">
-                Events Team
-              </Paragraph>
-            </li>
-            <li className="roundedList">
-            <div className="plusCircle">+</div>
-              <Paragraph inline className="Position">
-                Promotions Team
-              </Paragraph>
-            </li>
-          </ol>
+          <ul>
+            {members.map((member) => (
+              <ExpandableDiv>{member}</ExpandableDiv>
+            ))}
+          </ul>
         </div>
       </div>
     </div>
