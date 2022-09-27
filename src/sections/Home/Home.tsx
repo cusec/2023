@@ -21,7 +21,7 @@ function Home() {
     if (!image.src) {
       return;
     }
-    
+
     switch (text) {
       case "Learn":
         image.src = learnImage;
@@ -84,12 +84,7 @@ function Home() {
               <Paragraph inline> with like-minded students</Paragraph>
             </li>
             <li>
-              <Paragraph
-                className="Underline"
-                inline
-                bold
-                onHover={hoverText}
-              >
+              <Paragraph className="Underline" inline bold onHover={hoverText}>
                 Discover
               </Paragraph>
               <Paragraph inline> opportunities with many companies</Paragraph>
@@ -97,7 +92,7 @@ function Home() {
           </ol>
         </div>
       </div>
-      <div className="Section InlineSection List">
+      <div className="Section InlineSection List HideOnMobile">
         <div className="SectionContent">
           <div className="SectionAssets">
             <Subtitle>Our Impact</Subtitle>
