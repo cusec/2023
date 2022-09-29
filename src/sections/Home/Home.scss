@@ -120,7 +120,7 @@ body {
       width: 2rem;
       text-align: center;
       display: inline-block;
-      font-size: var(--font-nav);
+      font-size: var(--font-standard);
     }
   }
 }
@@ -153,6 +153,10 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   width: 100%;
+}
+
+.FaqHelpText {
+  font-size: var(--font-standard);
 }
 
 @media screen and (max-width: 768px) {

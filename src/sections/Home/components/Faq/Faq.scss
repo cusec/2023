@@ -1,0 +1,22 @@
+.Question {
+  border-bottom: 2px solid white;
+
+  button {
+    background: none;
+    border: none;
+    width: 100%;
+    text-align: left;
+    font-size: var(--font-standard);
+    color: white;
+    cursor: pointer;
+  }
+}
+
+.QuestionContent {
+  display: flex;
+  justify-content: space-between;
+}
+
+.AnswerHidden {
+  display: none;
+}

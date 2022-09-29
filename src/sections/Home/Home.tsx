@@ -1,8 +1,8 @@
 import React, { useEffect, useRef } from "react";
 import VanillaTilt from "vanilla-tilt";
 import { Button, Subtitle, Paragraph, Image } from "../../components";
-import { PricingCard } from "./components";
-import { Stagger } from "../../types";
+import { PricingCard, FAQ } from "./components";
+import { Stagger, FAQType } from "../../types";
 import natureImg from "../../assets/nature.jpeg";
 import connectImage from "../../assets/connect.png";
 import learnImage from "../../assets/learn.png";
@@ -13,6 +13,24 @@ import InteractiveButton from "../../components/InteractiveButton/InteractiveBut
 function Home() {
   const tilt = useRef<HTMLDivElement>(null);
   const imageRef = useRef<HTMLDivElement>(null);
+
+  const faqs: FAQType[] = [
+    {
+      id: 1,
+      question: "Q1",
+      answer: "A1",
+    },
+    {
+      id: 2,
+      question: "Q2",
+      answer: "A2",
+    },
+    {
+      id: 3,
+      question: "Q3",
+      answer: "A3",
+    },
+  ];
 
   const hoverText = (text: string) => {
     const image: HTMLImageElement = imageRef?.current
@@ -200,6 +218,18 @@ function Home() {
               vip
             />
           </div>
+        </div>
+      </div>
+      <div className="Section">
+        <div className="SectionContent">
+          <div className="CenterText">
+            <Subtitle>Frequently Asked Questions</Subtitle>
+            <p className="FaqHelpText">
+              Can't find what you're looking for? Send us an email at{" "}
+              <span className="Highlight">info@cusec.com</span>
+            </p>
+          </div>
+          <FAQ faqs={faqs} />
         </div>
       </div>
     </div>
