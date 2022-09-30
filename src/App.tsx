@@ -32,6 +32,7 @@ function App() {
       <Navbar onFaq={scrollToFaq} />
       <Routes>
         <Route path="/" element={<Home faqRef={faqSection} />} />
+        <Route path="/team" element={<Team />} />
         <Route path="*" element={<WildPage />} />
       </Routes>
       <Footer />
