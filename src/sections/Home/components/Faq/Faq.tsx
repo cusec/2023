@@ -71,10 +71,11 @@ export const FAQ = ({ faqs }: Props) => {
               open={showAnswer}
               id={formattedId}
               onToggle={() => handleToggle(id)}
+              key={`Q${id}`}
             >
               {question}
             </Question>
-            <Answer id={formattedId} open={showAnswer}>
+            <Answer id={formattedId} open={showAnswer} key={`A${id}`}>
               {answer}
             </Answer>
           </>

@@ -10,7 +10,11 @@ import discoverImage from "../../assets/discover.png";
 import "./Home.scss";
 import InteractiveButton from "../../components/InteractiveButton/InteractiveButton";
 
-function Home() {
+interface Props {
+  faqRef: React.RefObject<HTMLDivElement>;
+}
+
+function Home({ faqRef }: Props) {
   const tilt = useRef<HTMLDivElement>(null);
   const imageRef = useRef<HTMLDivElement>(null);
 
@@ -220,7 +224,7 @@ function Home() {
           </div>
         </div>
       </div>
-      <div className="Section">
+      <div className="Section" ref={faqRef}>
         <div className="SectionContent">
           <div className="CenterText">
             <Subtitle>Frequently Asked Questions</Subtitle>
