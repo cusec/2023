@@ -22,8 +22,9 @@ const Navbar = () => {
 
   const links = [
     { name: "Home", link: "/" },
-    { name: "Services", link: "/services" },
+    { name: "Schedule", link: "/schedule" },
     { name: "Sponsors", link: "/sponsors" },
+    { name: "Speakers", link: "/speakers" },
     { name: "Team", link: "/team" },
     { name: "FAQ", link: "/faq" },
   ];
