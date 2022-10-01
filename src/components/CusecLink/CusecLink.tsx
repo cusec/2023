@@ -7,9 +7,10 @@ import "./CusecLink.scss";
 interface Props {
   to: To;
   name: string;
+  scrollsTo?: () => void;
 }
 
-const CusecLink = ({ to, name }: Props) => {
+const CusecLink = ({ to, name, scrollsTo }: Props) => {
   const resolvedPath = useResolvedPath(to);
   const isActive = useMatch({ path: resolvedPath.pathname, end: true });
 
@@ -17,9 +18,15 @@ const CusecLink = ({ to, name }: Props) => {
 
   return (
     <li>
-      <NavLink to={to} style={{ textDecoration: "none" }}>
-        <p className={className}>{name}</p>
-      </NavLink>
+      {scrollsTo ? (
+        <p className={className} onClick={scrollsTo}>
+          {name}
+        </p>
+      ) : (
+        <NavLink to={to} style={{ textDecoration: "none" }}>
+          <p className={className}>{name}</p>
+        </NavLink>
+      )}
     </li>
   );
 };

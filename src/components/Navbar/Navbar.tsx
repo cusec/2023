@@ -6,7 +6,11 @@ import brandLogo from "../../assets/logo.png";
 import "./Navbar.scss";
 import "../CusecLink/CusecLink.scss";
 
-const Navbar = () => {
+interface Props {
+  onFaq: () => void;
+}
+
+const Navbar = ({ onFaq }: Props) => {
   const [solidNav, setSolidNav] = useState(false);
   const [showMobileNav, setShowMobileNav] = useState(false);
 
@@ -26,7 +30,7 @@ const Navbar = () => {
     { name: "Sponsors", link: "/sponsors" },
     { name: "Speakers", link: "/speakers" },
     { name: "Team", link: "/team" },
-    { name: "FAQ", link: "/faq" },
+    { name: "FAQ", link: "/faq", scrollsTo: onFaq },
   ];
 
   const className = classNames(
@@ -39,8 +43,8 @@ const Navbar = () => {
     showMobileNav ? "Mobile" : null
   );
 
-  const navbarLinks = links.map(({ link, name }) => {
-    return <CusecLink key={name} to={link} name={name} />;
+  const navbarLinks = links.map(({ link, name, scrollsTo }) => {
+    return <CusecLink key={name} to={link} name={name} scrollsTo={scrollsTo} />;
   });
 
   return (
