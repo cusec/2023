@@ -41,13 +41,13 @@
       background-position: 100% 100%;
       background-size: 100% 100%;
       color: var(--background);
-      border: 1px solid #a6c50c;
+      border: 1px solid var(--primary-light);
 
       &:hover {
         background-position: 0% 100%;
         background-size: 0% 100%;
         color: black;
-        background-color: #a6c50c;
+        background-color: var(--primary-light);
       }
     }
 
@@ -57,8 +57,8 @@
 
       &:hover {
         color: white;
-        background-color: #6336bb;
-        border-color: #6336bb;
+        background-color: var(--primary-dark);
+        border-color: var(--primary-dark);
       }
     }
   }
