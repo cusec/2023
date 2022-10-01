@@ -1,7 +1,45 @@
-.Wrapper {
+.FooterRow {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   background-color: var(--background-dark);
   color: white;
-  padding: 2% 10%;
+  padding: 1% 10%;
+}
+
+.FooterIcon {
+  width: min-content;
+  display: flex;
+  align-items: center;
+
+  a {
+    color: inherit;
+    padding: 0 10px;
+
+    i:hover {
+      color: var(--primary-dark);
+    }
+  }
+}
+
+.ShowOnMobile {
+  .FooterIcon {
+    margin: 0 auto 1rem auto;
+  }
+}
+
+@media screen and (min-width: 481px) {
+  .ShowOnMobile {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .FooterRow {
+    padding: 2%;
+
+    ul {
+      padding: 0;
+      margin: auto;
+    }
+  }
 }
