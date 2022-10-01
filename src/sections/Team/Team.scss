@@ -1,8 +1,15 @@
 .Team {
+  background: radial-gradient(
+      farthest-side at bottom left,
+      #9651fe38,
+      transparent
+    ),
+    radial-gradient(farthest-corner at bottom right, #9651fe38, transparent);
   color: white;
-  background-color: rgb(18, 2, 18);
+  padding: 0 18%;
 
   ul {
+    padding: 0;
     font-size: 35px;
     list-style: none;
   }
