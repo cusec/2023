@@ -17,13 +17,25 @@ const Footer = () => {
 
   const socialLinks = (
     <>
-      <a target="_blank" href="https://www.instagram.com/cusecofficial">
+      <a
+        target="_blank"
+        rel="noreferrer"
+        href="https://www.instagram.com/cusecofficial"
+      >
         <i className="fa-brands fa-instagram fa-xl"></i>
       </a>
-      <a target="_blank" href="https://www.tiktok.com/@cusec_official">
+      <a
+        target="_blank"
+        rel="noreferrer"
+        href="https://www.tiktok.com/@cusec_official"
+      >
         <i className="fa-brands fa-tiktok fa-xl"></i>
       </a>
-      <a target="_blank" href="https://ca.linkedin.com/company/cusec">
+      <a
+        target="_blank"
+        rel="noreferrer"
+        href="https://ca.linkedin.com/company/cusec"
+      >
         <i className="fa-brands fa-linkedin fa-xl"></i>
       </a>
     </>
