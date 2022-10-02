@@ -31,6 +31,7 @@ const Navbar = ({ onFaq }: Props) => {
     { name: "Speakers", link: "/speakers" },
     { name: "Team", link: "/team" },
     { name: "FAQ", link: "/faq", scrollsTo: onFaq },
+    { name: "Sign Up", link: "/signup" },
   ];
 
   const className = classNames(
@@ -69,6 +70,7 @@ const Navbar = ({ onFaq }: Props) => {
         <div className={navbarLinkClassName}>
           <ul className="NavItemList">{navbarLinks}</ul>
         </div>
+        <button className="SignUpButton">Sign Up</button>
       </div>
     </div>
   );
