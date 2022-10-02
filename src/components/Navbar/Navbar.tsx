@@ -44,8 +44,8 @@ const Navbar = ({ onFaq }: Props) => {
     showMobileNav ? "Mobile" : null
   );
 
-  const navbarLinks = links.map(({ link, name, scrollsTo }) => {
-    return <CusecLink key={name} to={link} name={name} scrollsTo={scrollsTo} />;
+  const navbarLinks = links.map(({ link, name }) => {
+    return <CusecLink key={name} to={link} name={name} />;
   });
 
   return (
