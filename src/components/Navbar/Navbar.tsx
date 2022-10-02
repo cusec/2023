@@ -30,7 +30,7 @@ const Navbar = ({ onFaq }: Props) => {
     { name: "Sponsors", link: "/sponsors" },
     { name: "Speakers", link: "/speakers" },
     { name: "Team", link: "/team" },
-    { name: "FAQ", link: "/faq" },
+    { name: "FAQ", link: "/faq", scrollsTo: onFaq },
     { name: "Sign Up", link: "/signup" },
   ];
 
@@ -44,8 +44,8 @@ const Navbar = ({ onFaq }: Props) => {
     showMobileNav ? "Mobile" : null
   );
 
-  const navbarLinks = links.map(({ link, name }) => {
-    return <CusecLink key={name} to={link} name={name} />;
+  const navbarLinks = links.map(({ link, name, scrollsTo }) => {
+    return <CusecLink key={name} to={link} name={name} scrollsTo={scrollsTo} />;
   });
 
   return (

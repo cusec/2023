@@ -19,10 +19,9 @@
 .Navbar {
   padding: 1% 10%;
   display: flex;
-  justify-content: left;
+  justify-content: space-between;
   width: 100%;
   box-sizing: border-box;
-  position: absolute;
 }
 
 .NavItemList {
@@ -70,40 +69,34 @@
   margin-left: auto;
   height: 63px;
   border-radius: 98px;
-  padding-left: 98px;
-  padding-right: 98px;
+  padding-left: 60px;
+  padding-right: 60px;
   border: 2px solid white;
   cursor: pointer;
   font-size: 20px;
   color: white;
   background: transparent;
-}
 
-@media only screen and (max-width: 768px) {
-  .SignUpButton {
-    display: none;
+  &::before {
+    content: "";
+    position: absolute;
+    border-radius: 98px;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    height: 100%;
+    background: linear-gradient(
+      276.71deg,
+      #daff01 -9.77%,
+      #ac8ddf 30.75%,
+      #9353ff 88.91%
+    );
   }
-}
 
-.SignUpButton::before {
-  content: "";
-  position: absolute;
-  border-radius: 98px;
-  left: 0;
-  top: 0;
-  z-index: -1;
-  height: 100%;
-  background: linear-gradient(
-    276.71deg,
-    #daff01 -9.77%,
-    #ac8ddf 30.75%,
-    #9353ff 88.91%
-  );
-}
-
-.SignUpButton:hover:before {
-  animation: flow 0.5s ease-out;
-  width: 100%;
+  &:hover:before {
+    animation: flow 0.5s ease-out;
+    width: 100%;
+  }
 }
 
 @keyframes flow {
@@ -115,7 +108,7 @@
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1180px) {
   .HamburgerIcon {
     display: block;
   }
@@ -138,5 +131,9 @@
 
   .Mobile > ul {
     display: block;
+  }
+
+  .SignUpButton {
+    display: none;
   }
 }
