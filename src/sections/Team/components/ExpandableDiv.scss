@@ -1,12 +1,27 @@
-.RoundedList {
+.ExpandableDiv {
+  overflow: hidden;
+
+  .fa-circle {
+    padding: 0 10px;
+  }
+
+  .Temporary {
+    font-size: 200px;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+}
+
+.Heading {
+  display: flex;
   margin: 0.7em 0;
   background: #ffffff;
-  position: relative;
+  align-items: center;
   border-radius: 40px 0px 0px 40px;
   color: #000000;
-  text-align: left;
-  display: flex;
-  align-items: center;
+  cursor: pointer;
 }
 
 .PlusIcon {
@@ -21,6 +36,41 @@
   font: 32px Arial, sans-serif;
 }
 
-.Position {
-  font-size: 70%;
+.MemberCards {
+  margin-top: -0.7em;
+  transition: height 0.2s ease-in-out;
+}
+
+.CardContent {
+  background-image: url(../../../assets/MemberCard.svg);
+  padding: 20px;
+  min-height: 250px;
+  font-size: var(--font-standard);
+  display: grid;
+  grid-template-areas:
+    "photo photo photo main main main"
+    "footer footer footer footer footer footer";
+
+  .Photo {
+    grid-area: photo;
+  }
+
+  .MemberInfo {
+    grid-area: main;
+
+    .Name {
+      font-weight: bold;
+      font-size: var(--font-subheading);
+      margin-bottom: 0;
+    }
+
+    .University {
+      margin-top: 0;
+    }
+  }
+
+  .Circles {
+    grid-area: footer;
+    text-align: center;
+  }
 }

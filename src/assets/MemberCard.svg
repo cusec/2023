@@ -1,0 +1,29 @@
+<svg width="1167" height="746" viewBox="0 0 1167 746" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_800_1625)">
+<path d="M0 40C0 17.9086 17.9086 0 40 0H1167V746H40C17.9086 746 0 728.091 0 706V40Z" fill="#9353FF"/>
+<circle cx="127" cy="364" r="279" fill="url(#paint0_radial_800_1625)" fill-opacity="0.4"/>
+<path d="M1175.5 657C1175.5 763.159 1091.83 848.5 989.5 848.5C887.166 848.5 803.5 763.159 803.5 657C803.5 550.841 887.166 465.5 989.5 465.5C1091.83 465.5 1175.5 550.841 1175.5 657Z" fill="url(#paint1_radial_800_1625)" fill-opacity="0.4" stroke="url(#paint2_radial_800_1625)" stroke-width="31"/>
+<ellipse cx="1084" cy="128.5" rx="125" ry="128.5" fill="url(#paint3_radial_800_1625)" fill-opacity="0.3"/>
+</g>
+<defs>
+<radialGradient id="paint0_radial_800_1625" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(160.48 5.01997) rotate(90.7759) scale(858.469)">
+<stop stop-color="#DAFF01"/>
+<stop offset="1" stop-color="#DAFF01" stop-opacity="0"/>
+</radialGradient>
+<radialGradient id="paint1_radial_800_1625" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1013.68 390.66) rotate(90.7553) scale(636.925 620.008)">
+<stop stop-color="#DAFF01"/>
+<stop offset="1" stop-color="#DAFF01" stop-opacity="0"/>
+</radialGradient>
+<radialGradient id="paint2_radial_800_1625" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1005 578.5) rotate(93.1076) scale(285.92 278.324)">
+<stop stop-color="#DAFF01"/>
+<stop offset="0.484375" stop-color="#DAFF01" stop-opacity="0"/>
+</radialGradient>
+<radialGradient id="paint3_radial_800_1625" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1099 -36.8367) rotate(90.7548) scale(395.386 384.621)">
+<stop stop-color="#DAFF01"/>
+<stop offset="1" stop-color="#DAFF01" stop-opacity="0"/>
+</radialGradient>
+<clipPath id="clip0_800_1625">
+<rect width="1167" height="746" fill="white"/>
+</clipPath>
+</defs>
+</svg>
