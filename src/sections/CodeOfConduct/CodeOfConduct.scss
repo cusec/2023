@@ -1,0 +1,11 @@
+.CodeOfConduct {
+  background: radial-gradient(
+      farthest-side at bottom left,
+      #9651fe38,
+      transparent
+    ),
+    radial-gradient(farthest-corner at bottom right, #9651fe38, transparent);
+  color: white;
+  padding: 10% 18% 10% 18%;
+  font-size: var(--font-standard);
+}
