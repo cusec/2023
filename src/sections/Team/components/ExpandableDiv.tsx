@@ -66,7 +66,7 @@ const ExpandableDiv = ({ role, members, children }: Props) => {
       <div className="MemberCards" style={{ height }}>
         <div ref={ref}>
           <div className="CardContent">
-            <div className="Photo">
+            <div className="Photo HideOnMobile">
               <i className="fa-solid fa-image Temporary"></i>
             </div>
             <div className="MemberInfo">
