@@ -65,7 +65,7 @@ const Navbar = ({ onFaq }: Props) => {
             setShowMobileNav(!showMobileNav);
           }}
         >
-          <i className="fa-solid fa-bars"></i>
+          <i className="fa-solid fa-bars fa-xl"></i>
         </button>
         <div className={navbarLinkClassName}>
           <ul className="NavItemList">{navbarLinks}</ul>
