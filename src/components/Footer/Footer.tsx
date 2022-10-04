@@ -7,8 +7,8 @@ import "./Footer.scss";
 const Footer = () => {
   const links = [
     { name: "Privacy", link: "/privacy" },
-    { name: "Terms", link: "/terms" },
-    { name: "Contact Us", link: "/contact" },
+    { name: "Code of Conduct", link: "/codeofconduct" },
+    { name: "Terms of Use", link: "/terms" },
   ];
 
   const footerLinks = links.map(({ link, name }) => {
