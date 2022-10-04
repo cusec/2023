@@ -1,6 +1,6 @@
-import React, { useRef } from "react";
+import React, { useRef, useEffect } from "react";
 import "./App.scss";
-import { Route, Routes, useNavigate } from "react-router-dom";
+import { Route, Routes, useLocation, useNavigate } from "react-router-dom";
 import { Navbar, Footer } from "./components";
 import Home from "./sections/Home";
 import Team from "./sections/Team/Team";
@@ -8,6 +8,14 @@ import WildPage from "./sections/WildPage";
 import CodeOfConduct from "./sections/CodeOfConduct/CodeOfConduct";
 import PrivacyPolicy from "./sections/PrivacyPolicy/PrivacyPolicy";
 import TermsOfUse from "./sections/TermsOfUse/TermsOfUse";
+
+function useScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+}
 
 function App() {
   const navigate = useNavigate();
@@ -29,6 +37,8 @@ function App() {
       behavior: "smooth",
     });
   };
+
+  useScrollToTop();
 
   return (
     <>
