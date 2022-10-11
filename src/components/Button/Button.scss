@@ -1,11 +1,5 @@
 .Button {
-  &.Inline {
-    display: inline-block;
-  }
-
-  &.Flex {
-    display: flex;
-  }
+  display: inline-block;
 
   align-items: center;
 
@@ -25,40 +19,47 @@
       cursor: pointer;
     }
 
-    &.Plain {
-      background-position: 0 100%;
-      background-size: 0% 100%;
-      color: white;
-
-      &:hover {
-        background-position: 100% 100%;
-        background-size: 100% 100%;
-        color: var(--background);
-      }
-    }
-
-    &.Inverted {
-      background-position: 100% 100%;
-      background-size: 100% 100%;
+    &.Primary:not(.Inverted) {
       color: var(--primary-light);
       border: 1px solid var(--primary-light);
 
       &:hover {
-        background-position: 0% 100%;
-        background-size: 0% 100%;
         color: black;
         background-color: var(--primary-light);
       }
     }
 
-    &.ColorBorder {
-      border: solid 1px white;
+    &.Primary.Inverted {
+      color: black;
+      background-color: var(--primary-light);
+
+      &:hover {
+        color: var(--primary-light);
+        border: 1px solid var(--primary-light);
+        background-color: transparent;
+      }
+    }
+
+    &.Secondary:not(.Inverted) {
       color: white;
+      border: solid 1px white;
 
       &:hover {
         color: white;
         background-color: var(--primary-dark);
         border-color: var(--primary-dark);
+      }
+    }
+
+    &.Secondary.Inverted {
+      color: white;
+      background-color: var(--primary-dark);
+      border-color: var(--primary-dark);
+
+      &:hover {
+        color: white;
+        border: solid 1px white;
+        background-color: transparent;
       }
     }
   }

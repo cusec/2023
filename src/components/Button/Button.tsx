@@ -3,21 +3,19 @@ import classNames from "classnames";
 import "./Button.scss";
 
 interface Props {
-  inline?: boolean;
-  plain?: boolean;
+  primary?: boolean;
   inverted?: boolean;
-  colorBorder?: boolean;
   children: string;
 }
 
-const Button = ({ inline, plain, inverted, colorBorder, children }: Props) => {
-  const wrapperClassNames = classNames("Button", inline ? "Inline" : "Flex");
+const Button = ({ primary, inverted, children }: Props) => {
+  const wrapperClassNames = classNames("Button");
 
   const className = classNames(
-    plain ? "Plain" : null,
-    inverted ? "Inverted" : null,
-    colorBorder ? "ColorBorder" : null
+    primary ? "Primary" : "Secondary",
+    inverted ? "Inverted" : null
   );
+
   return (
     <div className={wrapperClassNames}>
       <button type="button" className={className}>
