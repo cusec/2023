@@ -165,36 +165,31 @@ function Home({ faqRef }: Props) {
         </div>
       </div>
       <div className="Section List">
-        <div className="CenterText">
+        <div className="Yellow">
           <Subtitle>Canada’s annual software engineering conference</Subtitle>
         </div>
         <div className="SectionContent">
-          <ol>
-            <li>
-              <Paragraph inline>Lorem ipsum dolor sit amet</Paragraph>
-            </li>
-            <li>
-              <Paragraph inline>
-                Lorem ipsum dolor sit amet, consectetur
-              </Paragraph>
-            </li>
-            <li>
-              <Paragraph inline>Lorem ipsum dolor sit amet</Paragraph>
-            </li>
-          </ol>
+          <Paragraph>
+            Join thousands of students from across Canada for a weekend full of
+            interactive knowledge sharing, mentoring, career opportunities and
+            more as we explore the endless possibilities of the future of tech.
+          </Paragraph>
         </div>
       </div>
-      <div className="Section">
-        <div className="CenterText">
-          <Subtitle>Join us at CUSEC 2023</Subtitle>
+      <div className="Section NoPadding">
+        <div className="Yellow">
+          <Subtitle>Why Join?</Subtitle>
         </div>
         <div className="SectionContent">
-          <div className="CenterText">
-            <Paragraph inline>
-              Choose the plan that works best for you. Feel free to contact us
-              for further questions!
-            </Paragraph>
-          </div>
+          <Paragraph>
+            CUSEC is an annual software engineering conference organized for
+            students by students. It was founded in 2002 by a small team of tech
+            enthusiasts on a mission to educate and expose students to a diverse
+            range of areas in software engineering and computer science. The
+            conference enables attendees to discover knowledgeable speakers,
+            connect with sponsoring companies, and make lifelong friends, all in
+            a safe and comfortable space.
+          </Paragraph>
           <div className="PricingCards">
             <PricingCard
               title="Basic"
