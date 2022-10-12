@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import VanillaTilt from "vanilla-tilt";
 import {
   Button,
@@ -20,6 +20,8 @@ import "./Home.scss";
 interface Props {
   faqRef: React.RefObject<HTMLDivElement>;
 }
+
+const IMAGES = [learnImage, connectImage, discoverImage];
 
 function Home({ faqRef }: Props) {
   const tilt = useRef<HTMLDivElement>(null);
@@ -53,13 +55,13 @@ function Home({ faqRef }: Props) {
 
     switch (text) {
       case "Learn":
-        image.src = learnImage;
+        image.src = IMAGES[0];
         break;
       case "Connect":
-        image.src = connectImage;
+        image.src = IMAGES[1];
         break;
       case "Discover":
-        image.src = discoverImage;
+        image.src = IMAGES[2];
         break;
     }
   };
@@ -69,6 +71,16 @@ function Home({ faqRef }: Props) {
 
     VanillaTilt.init(tilt.current);
   }, []);
+
+  const images = [learnImage, connectImage, discoverImage];
+  const [currentImg, setCurrentImg] = useState(IMAGES[0]);
+
+  const circles = IMAGES.map((img) => (
+    <i
+      className={`fa-solid fa-circle ${img === currentImg ? "Highlight" : ""}`}
+      onClick={() => setCurrentImg(img)}
+    ></i>
+  ));
 
   return (
     <div className="Home">
@@ -117,7 +129,7 @@ function Home({ faqRef }: Props) {
           </div>
         </div>
       </div>
-      <div className="Section InlineSection List">
+      <div className="Section InlineSection List HideOnMobile">
         <div className="SectionImage" ref={imageRef}>
           <Image src={learnImage} alt="Learn image" />
         </div>
@@ -147,6 +159,55 @@ function Home({ faqRef }: Props) {
           </ol>
         </div>
       </div>
+      <div className="OnlyShowOnMobile MobileAbout">
+        <div className="CenterText">
+          <Subtitle>What is CUSEC?</Subtitle>
+        </div>
+        <div className="MobileAboutContent">
+          <Image src={currentImg} alt="Learn image" />
+          <div className="MobileObjectives List">
+            <div className="CenterText MobileTitle">
+              <Paragraph>Our Objectives</Paragraph>
+            </div>
+            <ol>
+              <li>
+                <Paragraph
+                  inline
+                  bold
+                  className="Underline"
+                  onHover={hoverText}
+                >
+                  Learn
+                </Paragraph>
+                <Paragraph inline> from world renowned experts</Paragraph>
+              </li>
+              <li>
+                <Paragraph
+                  inline
+                  bold
+                  className="Underline"
+                  onHover={hoverText}
+                >
+                  Connect
+                </Paragraph>
+                <Paragraph inline> with like-minded students</Paragraph>
+              </li>
+              <li>
+                <Paragraph
+                  className="Underline"
+                  inline
+                  bold
+                  onHover={hoverText}
+                >
+                  Discover
+                </Paragraph>
+                <Paragraph inline> opportunities with many companies</Paragraph>
+              </li>
+            </ol>
+          </div>
+          <div className="Circles">{circles}</div>
+        </div>
+      </div>
       <div className="Section InlineSection List HideOnMobile">
         <div className="SectionContent">
           <div className="SectionAssets">
@@ -173,7 +234,7 @@ function Home({ faqRef }: Props) {
           <Image src={natureImg} alt="Nature image" />
         </div>
       </div>
-      <div className="Section">
+      <div className="Section HideOnMobile">
         <div className="AboutSubtitle">
           <Subtitle>What is CUSEC?</Subtitle>
         </div>
