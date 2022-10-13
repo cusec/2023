@@ -1,14 +1,21 @@
 import React, { useEffect, useRef } from "react";
 import VanillaTilt from "vanilla-tilt";
-import { Button, Subtitle, Paragraph, Image } from "../../components";
+import {
+  Button,
+  Subtitle,
+  Paragraph,
+  Image,
+  InteractiveButton,
+} from "../../components";
 import { PricingCard, FAQ } from "./components";
 import { Stagger, FAQType } from "../../types";
 import natureImg from "../../assets/nature.jpeg";
 import connectImage from "../../assets/connect.png";
 import learnImage from "../../assets/learn.png";
 import discoverImage from "../../assets/discover.png";
+import mobileHome from "../../assets/mobileHome.svg";
+import mobileWaves from "../../assets/mobileWaves.svg";
 import "./Home.scss";
-import InteractiveButton from "../../components/InteractiveButton/InteractiveButton";
 
 interface Props {
   faqRef: React.RefObject<HTMLDivElement>;
@@ -65,7 +72,7 @@ function Home({ faqRef }: Props) {
 
   return (
     <div className="Home">
-      <div className="Container">
+      <div className="Container HideOnMobile">
         <div className="Card">
           <div className="Content" ref={tilt}>
             <Subtitle showLogo>CUSEC 2023</Subtitle>
@@ -74,13 +81,39 @@ function Home({ faqRef }: Props) {
               In Person
             </Paragraph>
             <div className="CardButtons">
-              <Button inverted inline>
+              <Button primary>Join us</Button>
+              <Button>Sponsor</Button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="OnlyShowOnMobile">
+        <div className="MobileHome">
+          <img
+            src={mobileHome}
+            height="auto"
+            alt="CUSEC Logo"
+            className="MobileLogo"
+          />
+          <div className="MobileHomeText">
+            <Paragraph>
+              Canadian University Software Engineering Conference
+            </Paragraph>
+            <Paragraph>January 2022 • In Person</Paragraph>
+            <div className="CardButtons">
+              <Button primary inverted>
                 Join us
               </Button>
-              <Button colorBorder inline>
-                Sponsor
-              </Button>
+              <Button inverted>Sponsor</Button>
             </div>
+          </div>
+          <div className="MobileWaves">
+            <img
+              src={mobileWaves}
+              height="auto"
+              alt="CUSEC Logo"
+              className="MobileLogo"
+            />
           </div>
         </div>
       </div>

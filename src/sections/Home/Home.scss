@@ -155,6 +155,44 @@
   font-size: var(--font-standard);
 }
 
+.OnlyShowOnMobile {
+  max-width: 100%;
+}
+
+.MobileHome {
+  height: 100vh;
+  text-align: center;
+  padding-top: 40%;
+
+  .MobileHomeText {
+    padding-top: 10%;
+    .CardButtons {
+      padding-top: 10%;
+
+      .Button {
+        margin: 0 5%;
+
+        button {
+          padding: 10px 30px;
+        }
+      }
+    }
+  }
+
+  .MobileWaves {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+}
+
 @media screen and (max-width: 768px) {
   .ImageColumn {
     -ms-flex: 30%;
@@ -164,6 +202,14 @@
 }
 
 @media screen and (max-width: 480px) {
+  .Home {
+    padding: 0 10%;
+
+    .Container {
+      width: 100%;
+    }
+  }
+
   .ImageColumn {
     -ms-flex: 100%;
     flex: 100%;
@@ -171,6 +217,12 @@
   }
 
   .HideOnMobile {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 481px) {
+  .OnlyShowOnMobile {
     display: none;
   }
 }
