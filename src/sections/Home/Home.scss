@@ -193,6 +193,57 @@
   }
 }
 
+.MobileAbout {
+  margin-top: -40%;
+  padding: 20% 0;
+
+  .MobileAboutContent {
+    position: relative;
+
+    .Image {
+      padding-top: 10%;
+    }
+
+    .MobileObjectives {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: rgba(0, 0, 0, 0.7);
+      width: 80%;
+      padding: 5%;
+      border-radius: 20px;
+
+      .MobileTitle {
+        font-weight: bold;
+
+        p {
+          margin: 0;
+        }
+      }
+
+      ol {
+        margin: 0;
+
+        li {
+          margin: 10px 0;
+        }
+      }
+    }
+
+    .Circles {
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      .fa-circle {
+        padding: 0 10px;
+      }
+    }
+  }
+}
+
 @media screen and (max-width: 768px) {
   .ImageColumn {
     -ms-flex: 30%;
