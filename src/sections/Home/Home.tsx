@@ -165,7 +165,7 @@ function Home({ faqRef }: Props) {
         </div>
       </div>
       <div className="Section List">
-        <div className="Yellow">
+        <div className="Highlight">
           <Subtitle>Canada’s annual software engineering conference</Subtitle>
         </div>
         <div className="SectionContent">
@@ -177,7 +177,7 @@ function Home({ faqRef }: Props) {
         </div>
       </div>
       <div className="Section NoPadding">
-        <div className="Yellow">
+        <div className="Highlight">
           <Subtitle>Why Join?</Subtitle>
         </div>
         <div className="SectionContent">
