@@ -19,7 +19,25 @@ function useScrollToTop() {
 
 function App() {
   const navigate = useNavigate();
+  const sponsorsSection = useRef<HTMLDivElement>(null);
   const faqSection = useRef<HTMLDivElement>(null);
+
+  const scrollToSponsors = () => {
+    const pathName = window.location.pathname;
+
+    if (pathName !== "/") {
+      navigate("/");
+    }
+
+    if (!sponsorsSection.current) {
+      return;
+    }
+
+    window.scrollTo({
+      top: sponsorsSection.current.offsetTop,
+      behavior: "smooth",
+    });
+  };
 
   const scrollToFaq = () => {
     const pathName = window.location.pathname;
@@ -42,9 +60,12 @@ function App() {
 
   return (
     <>
-      <Navbar onFaq={scrollToFaq} />
+      <Navbar onSponsors={scrollToSponsors} onFaq={scrollToFaq} />
       <Routes>
-        <Route path="/" element={<Home faqRef={faqSection} />} />
+        <Route
+          path="/"
+          element={<Home sponsorsRef={sponsorsSection} faqRef={faqSection} />}
+        />
         <Route path="/team" element={<Team />} />
         <Route path="/codeofconduct" element={<CodeOfConduct />} />
         <Route path="/privacy" element={<PrivacyPolicy />} />

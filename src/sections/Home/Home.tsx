@@ -15,15 +15,19 @@ import learnImage from "../../assets/learn.png";
 import discoverImage from "../../assets/discover.png";
 import mobileHome from "../../assets/mobileHome.svg";
 import mobileWaves from "../../assets/mobileWaves.svg";
+import morganStanleyLogo from "../../assets/morganStanleyLogo.png";
+import nokiaLogo from "../../assets/nokiaLogo.jpg";
+import stickerMuleLogo from "../../assets/stickerMuleLogo.png";
 import "./Home.scss";
 
 interface Props {
+  sponsorsRef: React.RefObject<HTMLDivElement>;
   faqRef: React.RefObject<HTMLDivElement>;
 }
 
 const IMAGES = [learnImage, connectImage, discoverImage];
 
-function Home({ faqRef }: Props) {
+function Home({ sponsorsRef, faqRef }: Props) {
   const tilt = useRef<HTMLDivElement>(null);
   const imageRef = useRef<HTMLDivElement>(null);
 
@@ -72,7 +76,6 @@ function Home({ faqRef }: Props) {
     VanillaTilt.init(tilt.current);
   }, []);
 
-  const images = [learnImage, connectImage, discoverImage];
   const [currentImg, setCurrentImg] = useState(IMAGES[0]);
 
   const circles = IMAGES.map((img) => (
@@ -258,7 +261,7 @@ function Home({ faqRef }: Props) {
           </div>
         </div>
       </div>
-      <div className="Section List">
+      <div className="Section">
         <div className="Highlight">
           <Subtitle>Canada’s annual software engineering conference</Subtitle>
         </div>
@@ -269,8 +272,6 @@ function Home({ faqRef }: Props) {
             more as we explore the endless possibilities of the future of tech.
           </Paragraph>
         </div>
-      </div>
-      <div className="Section NoPadding">
         <div className="Highlight">
           <Subtitle>Why Join?</Subtitle>
         </div>
@@ -284,6 +285,28 @@ function Home({ faqRef }: Props) {
             connect with sponsoring companies, and make lifelong friends, all in
             a safe and comfortable space.
           </Paragraph>
+        </div>
+      </div>
+      <div className="Section CenterText" ref={sponsorsRef}>
+        <Subtitle>Meet the companies making CUSEC possible.</Subtitle>
+        <div className="SponsorLogos">
+          <div className="SponsorSilver">
+            <img
+              src={morganStanleyLogo}
+              height="auto"
+              alt="Morgan Stanley Logo"
+            />
+          </div>
+          <div className="SponsorBronze">
+            <img src={nokiaLogo} height="auto" alt="Nokia Logo" />
+          </div>
+          <div className="SponsorInKind">
+            <img src={stickerMuleLogo} height="auto" alt="Sticker Mule Logo" />
+          </div>
+        </div>
+      </div>
+      <div className="Section">
+        <div className="SectionContent">
           <div className="PricingCards">
             <PricingCard
               title="Basic"

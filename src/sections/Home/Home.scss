@@ -148,8 +148,22 @@
   }
 }
 
-.NoPadding {
-  padding: 0;
+.SponsorLogos {
+  img {
+    padding-top: 20px;
+  }
+
+  .SponsorSilver > img {
+    width: 35%;
+  }
+
+  .SponsorBronze > img {
+    width: 15%;
+  }
+
+  .SponsorInKind > img {
+    width: 7%;
+  }
 }
 
 .PricingCards {

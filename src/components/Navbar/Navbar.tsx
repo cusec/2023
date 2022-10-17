@@ -7,10 +7,11 @@ import "./Navbar.scss";
 import "../CusecLink/CusecLink.scss";
 
 interface Props {
+  onSponsors: () => void;
   onFaq: () => void;
 }
 
-const Navbar = ({ onFaq }: Props) => {
+const Navbar = ({ onSponsors, onFaq }: Props) => {
   const [solidNav, setSolidNav] = useState(false);
   const [showMobileNav, setShowMobileNav] = useState(false);
 
@@ -27,7 +28,7 @@ const Navbar = ({ onFaq }: Props) => {
   const links = [
     { name: "Home", link: "/" },
     { name: "Schedule", link: "/schedule" },
-    { name: "Sponsors", link: "/sponsors" },
+    { name: "Sponsors", link: "/sponsors", scrollsTo: onSponsors },
     { name: "Speakers", link: "/speakers" },
     { name: "Team", link: "/team" },
     { name: "FAQ", link: "/faq", scrollsTo: onFaq },
