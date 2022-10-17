@@ -309,6 +309,13 @@ function Home({ sponsorsRef, faqRef }: Props) {
       </div>
       <div className="Section">
         <div className="SectionContent">
+          <div className="CenterText">
+            <Subtitle>Join Us at CUSEC 2023!</Subtitle>
+            <Paragraph>
+              Choose plan that works best for you, feel free to contact us for
+              further questions
+            </Paragraph>
+          </div>
           <div className="PricingCards">
             <PricingCard
               title="Basic"

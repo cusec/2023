@@ -25,16 +25,15 @@ const PricingCard = ({ title, helpText, price, features, vip }: Props) => {
 
   return (
     <div className={className}>
-      <h2>{title}</h2>
-      <p className="HelpText">{helpText}</p>
       <div className="PriceContainer">
-        <div className="Wrapper">
-          <div className="WrapperContent">
-            <span className="DollarSign">$</span>
-            <span className="Price">{price}</span>
-          </div>
+        {vip ? <div className="MostPopular">MOST POPULAR</div> : null}
+        <div className="PriceContainerContent">
+          <span className="Price">${price}</span>
+          <span className="PriceExtras">/ person</span>
         </div>
       </div>
+      <h1>{title}</h1>
+      <p className="HelpText">{helpText}</p>
       <div className="Features">{formattedFeatures}</div>
     </div>
   );
