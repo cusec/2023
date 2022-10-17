@@ -263,7 +263,7 @@ function Home({ sponsorsRef, faqRef }: Props) {
           </div>
         </div>
       </div>
-      <div className="Section">
+      <div className="Section HideOnMobile">
         <div className="Highlight">
           <Subtitle>Canada’s annual software engineering conference</Subtitle>
         </div>
