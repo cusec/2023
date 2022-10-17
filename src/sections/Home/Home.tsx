@@ -34,13 +34,15 @@ function Home({ sponsorsRef, faqRef }: Props) {
   const faqs: FAQType[] = [
     {
       id: 1,
-      question: "Q1",
+      question: "When and Where is CUSEC Happening?",
       answer: "A1",
     },
     {
       id: 2,
-      question: "Q2",
-      answer: "A2",
+      question:
+        "Where can I find the conference schedule, speakers & sponsors?",
+      answer:
+        "The schedule will be available on the website soon along with our list of speakers and sponsors! We are working around the clock to create the best conference experience for you, promised.",
     },
     {
       id: 3,
