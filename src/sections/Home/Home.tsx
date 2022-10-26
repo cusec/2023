@@ -9,10 +9,13 @@ import {
 } from "../../components";
 import { PricingCard, FAQ } from "./components";
 import { Stagger, FAQType } from "../../types";
-import natureImg from "../../assets/nature.jpeg";
-import connectImage from "../../assets/connect.png";
-import learnImage from "../../assets/learn.png";
-import discoverImage from "../../assets/discover.png";
+import impactImg from "../../assets/impact.jpg";
+import connectImage from "../../assets/Connect.jpg";
+import learnImage from "../../assets/Learn.jpg";
+import discoverImage from "../../assets/Discover.jpg";
+import groupImage1 from "../../assets/CUSEC1.jpg"
+import groupImage2 from "../../assets/CUSEC2.jpg"
+import groupImage3 from "../../assets/CUSEC3.jpg"
 import mobileHome from "../../assets/mobileHome.svg";
 import mobileWaves from "../../assets/mobileWaves.svg";
 import morganStanleyLogo from "../../assets/morganStanleyLogo.png";
@@ -138,7 +141,7 @@ function Home({ sponsorsRef, faqRef }: Props) {
         <div className="SectionImage" ref={imageRef}>
           <Image src={learnImage} alt="Learn image" />
         </div>
-        <div className="SectionContent">
+        <div className="SectionContent Objectives">
           <div className="SectionAssets">
             <Subtitle>Our Objectives</Subtitle>
           </div>
@@ -236,7 +239,7 @@ function Home({ sponsorsRef, faqRef }: Props) {
           </div>
         </div>
         <div className="SectionImage">
-          <Image src={natureImg} alt="Nature image" />
+          <Image src={impactImg} alt="Nature image" />
         </div>
       </div>
       <div className="Section HideOnMobile">
@@ -246,17 +249,17 @@ function Home({ sponsorsRef, faqRef }: Props) {
         <div className="ImageRow">
           <div className="ImageColumn">
             <Image
-              src={natureImg}
+              src={groupImage1}
               alt="Nature image"
               stagger={Stagger.Bottom}
             />
           </div>
           <div className="ImageColumn">
-            <Image src={natureImg} alt="Nature image" stagger={Stagger.Top} />
+            <Image src={groupImage2} alt="Nature image" stagger={Stagger.Top} />
           </div>
           <div className="ImageColumn">
             <Image
-              src={natureImg}
+              src={groupImage3}
               alt="Nature image"
               stagger={Stagger.Bottom}
             />
