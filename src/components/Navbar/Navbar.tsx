@@ -46,10 +46,7 @@ const Navbar = ({ onSponsors, onFaq }: Props) => {
   );
 
   const handleSignUp = () => {
-    window.open(
-      "https://docs.google.com/forms/d/1IPNnDzX31cmSyw26cGOXWDxAWtnkOWstdjvOi6Tajig/viewform?edit_requested=true",
-      "_blank"
-    );
+    window.open("https://forms.gle/rWDZNRreFYGVqGP76", "_blank");
   };
 
   const navbarLinks = links.map(({ link, name, scrollsTo }) => {
