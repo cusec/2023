@@ -45,6 +45,10 @@ const Navbar = ({ onSponsors, onFaq }: Props) => {
     showMobileNav ? "Mobile" : null
   );
 
+  const handleSignUp = () => {
+    window.open("https://forms.gle/rWDZNRreFYGVqGP76", "_blank");
+  };
+
   const navbarLinks = links.map(({ link, name, scrollsTo }) => {
     return <CusecLink key={name} to={link} name={name} scrollsTo={scrollsTo} />;
   });
@@ -71,7 +75,9 @@ const Navbar = ({ onSponsors, onFaq }: Props) => {
         <div className={navbarLinkClassName}>
           <ul className="NavItemList">{navbarLinks}</ul>
         </div>
-        <button className="SignUpButton">Sign Up</button>
+        <button className="SignUpButton" onClick={handleSignUp}>
+          Sign Up
+        </button>
       </div>
     </div>
   );
