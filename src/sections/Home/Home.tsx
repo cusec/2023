@@ -5,11 +5,11 @@ import {
   Subtitle,
   Paragraph,
   Image,
-  InteractiveButton,
+  // InteractiveButton,
 } from "../../components";
 import { PricingCard, FAQ } from "./components";
 import { Stagger, FAQType } from "../../types";
-import impactImg from "../../assets/impact.jpg";
+// import impactImg from "../../assets/impact.jpg";
 import connectImage from "../../assets/Connect.jpg";
 import learnImage from "../../assets/Learn.jpg";
 import discoverImage from "../../assets/Discover.jpg";
@@ -103,6 +103,10 @@ function Home({ sponsorsRef, faqRef }: Props) {
     ></i>
   ));
 
+  const handleJoinUs = () => {
+    window.open("https://forms.gle/rWDZNRreFYGVqGP76", "_blank");
+  };
+
   return (
     <div className="Home">
       <div className="Container HideOnMobile">
@@ -114,8 +118,10 @@ function Home({ sponsorsRef, faqRef }: Props) {
               In Person
             </Paragraph>
             <div className="CardButtons">
-              <Button primary>Join us</Button>
-              <Button>Sponsor</Button>
+              <Button primary onClick={handleJoinUs}>
+                Join us
+              </Button>
+              {/* <Button>Sponsor</Button> */}
             </div>
           </div>
         </div>
