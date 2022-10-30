@@ -229,7 +229,7 @@ function Home({ sponsorsRef, faqRef }: Props) {
           <div className="Circles">{circles}</div>
         </div>
       </div>
-      <div className="Section InlineSection List HideOnMobile">
+      {/* <div className="Section InlineSection List HideOnMobile">
         <div className="SectionContent">
           <div className="SectionAssets">
             <Subtitle>Our Impact</Subtitle>
@@ -254,7 +254,7 @@ function Home({ sponsorsRef, faqRef }: Props) {
         <div className="SectionImage">
           <Image src={impactImg} alt="Nature image" />
         </div>
-      </div>
+      </div> */}
       <div className="Section HideOnMobile">
         <div className="AboutSubtitle">
           <Subtitle>What is CUSEC?</Subtitle>
