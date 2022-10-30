@@ -336,26 +336,20 @@ function Home({ sponsorsRef, faqRef }: Props) {
             <PricingCard
               title="Basic"
               helpText="Have a go and experience CUSEC"
-              price={2}
+              priceStudent={80}
+              priceProf={200}
               features={[
-                "Hopin Virtual Conference",
-                "Discord Access",
                 "Social Events",
                 "Networking Perks",
-                "Talks and Workshops",
+                "Talks and Workshops hosted by our sponsors",
               ]}
             />
             <PricingCard
               title="VIP"
               helpText="Experience the exclusivity of VIP"
-              price={35}
-              features={[
-                "All Basic Benefits",
-                "In-person Event",
-                "Exclusive CUSEC Merch",
-                "Food + Snacks",
-                "And more!",
-              ]}
+              priceStudent={110}
+              priceProf={230}
+              features={["All Basic Benefits", "Exclusive CUSEC 2023 Merch"]}
               vip
             />
           </div>
