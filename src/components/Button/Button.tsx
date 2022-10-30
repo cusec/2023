@@ -5,10 +5,11 @@ import "./Button.scss";
 interface Props {
   primary?: boolean;
   inverted?: boolean;
+  onClick?: () => void;
   children: string;
 }
 
-const Button = ({ primary, inverted, children }: Props) => {
+const Button = ({ primary, inverted, onClick, children }: Props) => {
   const wrapperClassNames = classNames("Button");
 
   const className = classNames(
@@ -18,7 +19,7 @@ const Button = ({ primary, inverted, children }: Props) => {
 
   return (
     <div className={wrapperClassNames}>
-      <button type="button" className={className}>
+      <button type="button" className={className} onClick={onClick}>
         {children}
       </button>
     </div>
