@@ -29,7 +29,7 @@ const Navbar = ({ onSponsors, onFaq }: Props) => {
     { name: "Home", link: "/" },
     // { name: "Schedule", link: "/schedule" },
     { name: "Sponsors", link: "/sponsors", scrollsTo: onSponsors },
-    { name: "Speakers", link: "/speakers" },
+    // { name: "Speakers", link: "/speakers" },
     { name: "Team", link: "/team" },
     { name: "FAQ", link: "/faq", scrollsTo: onFaq },
     { name: "Sign Up", link: "/signup" },
