@@ -13,9 +13,9 @@ import impactImg from "../../assets/impact.jpg";
 import connectImage from "../../assets/Connect.jpg";
 import learnImage from "../../assets/Learn.jpg";
 import discoverImage from "../../assets/Discover.jpg";
-import groupImage1 from "../../assets/CUSEC1.jpg"
-import groupImage2 from "../../assets/CUSEC2.jpg"
-import groupImage3 from "../../assets/CUSEC3.jpg"
+import groupImage1 from "../../assets/CUSEC1.jpg";
+import groupImage2 from "../../assets/CUSEC2.jpg";
+import groupImage3 from "../../assets/CUSEC3.jpg";
 import mobileHome from "../../assets/mobileHome.svg";
 import mobileWaves from "../../assets/mobileWaves.svg";
 import morganStanleyLogo from "../../assets/morganStanleyLogo.png";
@@ -37,8 +37,9 @@ function Home({ sponsorsRef, faqRef }: Props) {
   const faqs: FAQType[] = [
     {
       id: 1,
-      question: "When and Where is CUSEC Happening?",
-      answer: "A1",
+      question: "When and where is CUSEC Happening?",
+      answer:
+        "Our team is hard at work finalizing these details! More information will be posted as soon as possible!",
     },
     {
       id: 2,
@@ -49,9 +50,21 @@ function Home({ sponsorsRef, faqRef }: Props) {
     },
     {
       id: 3,
-      question: "Q3",
-      answer: "A3",
+      question: "Who can attend? What are the costs of attending?",
+      answer:
+        "High school, undergraduate and graduate students from all across Canada are all welcome to attend. If you are still registered as a student at an education institution and have not graduated by January 2020, you can buy a student ticket starting at $80. We have always strived to keep the ticket price affordable for students. Otherwise, the professional ticket is for you! We sell professional tickets for a base price of $200.",
     },
+    {
+      id: 4,
+      question: "How can I get a refund? Can I re-sell my ticket?",
+      answer:
+        "It is strictly forbidden to re-sell a CUSEC ticket above the purchased price. If you cannot attend anymore, reach out to info@cusec.net and CC your head delegate if you have one. We will do our best to assist you. Tickets can only be refunded within 30 days of purchase.",
+    },
+    // {
+    //   id: 5,
+    //   question: "Q",
+    //   answer: "A",
+    // },
   ];
 
   const hoverText = (text: string) => {
