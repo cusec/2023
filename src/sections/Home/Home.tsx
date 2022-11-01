@@ -39,7 +39,7 @@ function Home({ sponsorsRef, faqRef }: Props) {
       id: 1,
       question: "When and where is CUSEC Happening?",
       answer:
-        "Our team is hard at work finalizing these details! More information will be posted as soon as possible!",
+        "CUSEC 2023 will be held on January 12, 13, & 14 at the Hotel Bonaventure located in Downtown Montreal, QC.",
     },
     {
       id: 2,
@@ -52,7 +52,7 @@ function Home({ sponsorsRef, faqRef }: Props) {
       id: 3,
       question: "Who can attend? What are the costs of attending?",
       answer:
-        "High school, undergraduate and graduate students from all across Canada are all welcome to attend. If you are still registered as a student at an education institution and have not graduated by January 2020, you can buy a student ticket starting at $80. We have always strived to keep the ticket price affordable for students. Otherwise, the professional ticket is for you! We sell professional tickets for a base price of $200.",
+        "High school, undergraduate and graduate students from all across Canada are all welcome to attend. If you are still registered as a student at an education institution and have not graduated by January 2023, you can buy a student ticket starting at $80. We have always strived to keep the ticket price affordable for students. Otherwise, the professional ticket is for you! We sell professional tickets for a base price of $200.",
     },
     {
       id: 4,
@@ -107,6 +107,10 @@ function Home({ sponsorsRef, faqRef }: Props) {
     window.open("https://forms.gle/rWDZNRreFYGVqGP76", "_blank");
   };
 
+  const handleSponsorMailTo = () => {
+    window.open("mailto:info@cusec.net");
+  };
+
   return (
     <div className="Home">
       <div className="Container HideOnMobile">
@@ -114,14 +118,14 @@ function Home({ sponsorsRef, faqRef }: Props) {
           <div className="Content" ref={tilt}>
             <Subtitle showLogo>CUSEC 2023</Subtitle>
             <Paragraph className="CardText">
-              Canadian University Software Engineering Conference January 2022 •
+              Canadian University Software Engineering Conference January 2023 •
               In Person
             </Paragraph>
             <div className="CardButtons">
               <Button primary onClick={handleJoinUs}>
                 Join us
               </Button>
-              {/* <Button>Sponsor</Button> */}
+              <Button onClick={handleSponsorMailTo}>Sponsor</Button>
             </div>
           </div>
         </div>

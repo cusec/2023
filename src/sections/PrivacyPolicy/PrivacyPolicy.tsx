@@ -11,7 +11,7 @@ function PrivacyPolicy() {
       <p>
         Your privacy is important to us. It is CUSEC's policy to respect your
         privacy regarding any information we may collect from you across our
-        website, https://2021.cusec.net, and other sites we own and operate.
+        website, https://2023.cusec.net, and other sites we own and operate.
       </p>
 
       <p>
