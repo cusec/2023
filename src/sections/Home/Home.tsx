@@ -317,6 +317,7 @@ function Home({ sponsorsRef, faqRef }: Props) {
       </div>
       <div className="Section CenterText" ref={sponsorsRef}>
         <Subtitle>Meet the companies making CUSEC possible.</Subtitle>
+        <Paragraph>More to be introduced soon!</Paragraph>
         <div className="SponsorLogos">
           <div className="SponsorSilver">
             <img
