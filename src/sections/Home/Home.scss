@@ -1,10 +1,46 @@
+@-webkit-keyframes backgroundAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@-moz-keyframes backgroundAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes backgroundAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 .Home {
-  background: radial-gradient(
-      farthest-side at bottom left,
-      #9651fe38,
-      transparent
-    ),
-    radial-gradient(farthest-corner at bottom right, #9651fe38, transparent);
+  background: linear-gradient(246deg, #7141b9, #28153a, #2e1455, #5a1f79);
+  background-size: 200% 200%;
+  -webkit-animation: backgroundAnimation 10s ease infinite;
+  -moz-animation: backgroundAnimation 10s ease infinite;
+  animation: backgroundAnimation 10s ease infinite;
+
   color: #ffffff;
   padding: 0 18%;
 }
@@ -226,17 +262,14 @@
 
   .MobileAboutContent {
     position: relative;
-
-    .Image {
-      padding-top: 10%;
-    }
+    padding-top: 10%;
 
     .MobileObjectives {
       position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      background: rgba(0, 0, 0, 0.7);
+      background: rgba(0, 0, 0, 0.8);
       width: 80%;
       padding: 5%;
       border-radius: 20px;
@@ -296,6 +329,20 @@
 
   .HideOnMobile {
     display: none;
+  }
+
+  .SponsorLogos {
+    .SponsorSilver > img {
+      width: 45%;
+    }
+
+    .SponsorBronze > img {
+      width: 25%;
+    }
+
+    .SponsorInKind > img {
+      width: 17%;
+    }
   }
 }
 
