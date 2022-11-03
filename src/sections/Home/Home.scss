@@ -237,6 +237,7 @@
 
         button {
           padding: 10px 30px;
+          margin: 5px 0;
         }
       }
     }
@@ -244,8 +245,8 @@
 
   .MobileWaves {
     position: absolute;
+    top: 800;
     left: 0;
-    bottom: 0;
     width: 100%;
 
     img {
