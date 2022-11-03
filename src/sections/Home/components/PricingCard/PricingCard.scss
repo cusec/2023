@@ -47,20 +47,18 @@
   .Features {
     display: grid;
     grid-template-columns: 1fr 85%;
+    margin: 10px;
   }
 }
 
 .PriceContainer {
   .PriceContainerContent {
-    height: 100%;
-    width: 100%;
-    position: relative;
+    display: flex;
+    align-items: center;
 
     .PriceExtras {
       font-size: 20px;
       font-weight: 400;
-      position: absolute;
-      top: 17px;
     }
 
     .Price {
@@ -88,14 +86,20 @@
   .PricingCard {
     width: 100%;
     margin: 50px 0 0 0;
+    padding: 30px;
 
-    .Features {
-      margin: 30px;
-      padding: 20px;
+    .PriceContainerContent {
+      .Price {
+        font-size: 30px;
+      }
+
+      .PriceExtras {
+        font-size: 15px;
+      }
     }
-  }
 
-  .Vip {
-    padding: 0;
+    p.HelpText {
+      margin: 10px 0;
+    }
   }
 }

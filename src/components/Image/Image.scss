@@ -8,3 +8,10 @@
 .StaggerBottom {
   margin-bottom: 20%;
 }
+
+@media screen and (max-width: 768px) {
+  .Image {
+    width: 100%;
+    height: 500px;
+  }
+}
