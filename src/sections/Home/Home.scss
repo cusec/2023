@@ -43,6 +43,8 @@
 
   color: #ffffff;
   padding: 0 18%;
+
+  --margin-home: calc(10%);
 }
 
 .Container {
@@ -226,6 +228,7 @@
   height: 100vh;
   text-align: center;
   padding-top: 40%;
+  margin: 0 calc(-1 * var(--margin-home));
 
   .MobileHomeText {
     padding-top: 10%;
@@ -244,9 +247,6 @@
   }
 
   .MobileWaves {
-    position: absolute;
-    top: 800;
-    left: 0;
     width: 100%;
 
     img {
