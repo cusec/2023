@@ -6,12 +6,7 @@ import brandLogo from "../../assets/logo.png";
 import "./Navbar.scss";
 import "../CusecLink/CusecLink.scss";
 
-interface Props {
-  onSponsors: () => void;
-  onFaq: () => void;
-}
-
-const Navbar = ({ onSponsors, onFaq }: Props) => {
+const Navbar = () => {
   const [solidNav, setSolidNav] = useState(false);
   const [showMobileNav, setShowMobileNav] = useState(false);
 
@@ -28,10 +23,10 @@ const Navbar = ({ onSponsors, onFaq }: Props) => {
   const links = [
     { name: "Home", link: "/" },
     // { name: "Schedule", link: "/schedule" },
-    { name: "Sponsors", link: "/sponsors", scrollsTo: onSponsors },
+    { name: "Sponsors", link: "/sponsors", hashLink: true },
     // { name: "Speakers", link: "/speakers" },
     { name: "Team", link: "/team" },
-    { name: "FAQ", link: "/faq", scrollsTo: onFaq },
+    { name: "FAQ", link: "/faq", hashLink: true },
     { name: "Sign Up", link: "/signup" },
   ];
 
@@ -49,8 +44,8 @@ const Navbar = ({ onSponsors, onFaq }: Props) => {
     window.open("https://forms.gle/rWDZNRreFYGVqGP76", "_blank");
   };
 
-  const navbarLinks = links.map(({ link, name, scrollsTo }) => {
-    return <CusecLink key={name} to={link} name={name} scrollsTo={scrollsTo} />;
+  const navbarLinks = links.map(({ link, name, hashLink }) => {
+    return <CusecLink key={name} to={link} name={name} hashLink={hashLink} />;
   });
 
   return (
