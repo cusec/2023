@@ -23,13 +23,6 @@ import nokiaLogo from "../../assets/nokiaLogo.jpg";
 import stickerMuleLogo from "../../assets/stickerMuleLogo.png";
 import "./Home.scss";
 
-interface Props {
-  sponsorScroll: boolean;
-  faqScroll: boolean;
-  setSponsorScroll: React.Dispatch<React.SetStateAction<boolean>>;
-  setFaqScroll: React.Dispatch<React.SetStateAction<boolean>>;
-}
-
 const IMAGES = [learnImage, connectImage, discoverImage];
 
 const FAQS: FAQType[] = [
@@ -64,16 +57,9 @@ const FAQS: FAQType[] = [
   // },
 ];
 
-function Home({
-  sponsorScroll,
-  faqScroll,
-  setSponsorScroll,
-  setFaqScroll,
-}: Props) {
+function Home() {
   const tilt = useRef<HTMLDivElement>(null);
   const imageRef = useRef<HTMLDivElement>(null);
-  const sponsorsRef = useRef<HTMLDivElement>(null);
-  const faqRef = useRef<HTMLDivElement>(null);
 
   const hoverText = (text: string) => {
     const image: HTMLImageElement = imageRef?.current
@@ -101,28 +87,6 @@ function Home({
 
     VanillaTilt.init(tilt.current);
   }, []);
-
-  useEffect(() => {
-    if (sponsorScroll && sponsorsRef.current) {
-      window.scrollTo({
-        top: sponsorsRef.current?.offsetTop,
-        behavior: "smooth",
-      });
-
-      setSponsorScroll(false);
-    }
-  }, [sponsorScroll, setSponsorScroll]);
-
-  useEffect(() => {
-    if (faqScroll && faqRef.current) {
-      window.scrollTo({
-        top: faqRef.current?.offsetTop,
-        behavior: "smooth",
-      });
-
-      setFaqScroll(false);
-    }
-  }, [faqScroll, setFaqScroll]);
 
   const [currentImg, setCurrentImg] = useState(IMAGES[0]);
 
@@ -345,7 +309,7 @@ function Home({
           </Paragraph>
         </div>
       </div>
-      <div className="Section CenterText" ref={sponsorsRef}>
+      <div className="Section CenterText" id="sponsors">
         <Subtitle>Meet the companies making CUSEC possible.</Subtitle>
         <Paragraph>More to be introduced soon!</Paragraph>
         <div className="SponsorLogos">
@@ -396,7 +360,7 @@ function Home({
           </div>
         </div>
       </div>
-      <div className="Section" ref={faqRef}>
+      <div className="Section" id="faqs">
         <div className="SectionContent">
           <div className="CenterText">
             <Subtitle>Frequently Asked Questions</Subtitle>

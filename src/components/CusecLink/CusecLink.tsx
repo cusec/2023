@@ -1,5 +1,6 @@
 import React from "react";
 import { NavLink, To, useResolvedPath, useMatch } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 import classNames from "classnames";
 
 import "./CusecLink.scss";
@@ -7,10 +8,10 @@ import "./CusecLink.scss";
 interface Props {
   to: To;
   name: string;
-  scrollsTo?: () => void;
+  hashLink?: boolean;
 }
 
-const CusecLink = ({ to, name, scrollsTo }: Props) => {
+const CusecLink = ({ to, name, hashLink }: Props) => {
   const resolvedPath = useResolvedPath(to);
   const isActive = useMatch({ path: resolvedPath.pathname, end: true });
 
@@ -18,10 +19,10 @@ const CusecLink = ({ to, name, scrollsTo }: Props) => {
 
   return (
     <li>
-      {scrollsTo ? (
-        <p className={className} onClick={scrollsTo}>
-          {name}
-        </p>
+      {hashLink ? (
+        <HashLink smooth to={`/#${name}`} className="HashLink">
+          <p className={className}>{name}</p>
+        </HashLink>
       ) : (
         <NavLink to={to} style={{ textDecoration: "none" }}>
           <p className={className}>{name}</p>
