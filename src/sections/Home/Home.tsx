@@ -24,48 +24,56 @@ import stickerMuleLogo from "../../assets/stickerMuleLogo.png";
 import "./Home.scss";
 
 interface Props {
-  sponsorsRef: React.RefObject<HTMLDivElement>;
-  faqRef: React.RefObject<HTMLDivElement>;
+  sponsorScroll: boolean;
+  faqScroll: boolean;
+  setSponsorScroll: React.Dispatch<React.SetStateAction<boolean>>;
+  setFaqScroll: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 const IMAGES = [learnImage, connectImage, discoverImage];
 
-function Home({ sponsorsRef, faqRef }: Props) {
+const FAQS: FAQType[] = [
+  {
+    id: 1,
+    question: "When and where is CUSEC Happening?",
+    answer:
+      "CUSEC 2023 will be held on January 12, 13, & 14 at the Hotel Bonaventure located in Downtown Montreal, QC.",
+  },
+  {
+    id: 2,
+    question: "Where can I find the conference schedule, speakers & sponsors?",
+    answer:
+      "The schedule will be available on the website soon along with our list of speakers and sponsors! We are working around the clock to create the best conference experience for you, promised.",
+  },
+  {
+    id: 3,
+    question: "Who can attend? What are the costs of attending?",
+    answer:
+      "High school, undergraduate and graduate students from all across Canada are all welcome to attend. If you are still registered as a student at an education institution and have not graduated by January 2023, you can buy a student ticket starting at $80. We have always strived to keep the ticket price affordable for students. Otherwise, the professional ticket is for you! We sell professional tickets for a base price of $200.",
+  },
+  {
+    id: 4,
+    question: "How can I get a refund? Can I re-sell my ticket?",
+    answer:
+      "It is strictly forbidden to re-sell a CUSEC ticket above the purchased price. If you cannot attend anymore, reach out to info@cusec.net and CC your head delegate if you have one. We will do our best to assist you. Tickets can only be refunded within 30 days of purchase.",
+  },
+  // {
+  //   id: 5,
+  //   question: "Q",
+  //   answer: "A",
+  // },
+];
+
+function Home({
+  sponsorScroll,
+  faqScroll,
+  setSponsorScroll,
+  setFaqScroll,
+}: Props) {
   const tilt = useRef<HTMLDivElement>(null);
   const imageRef = useRef<HTMLDivElement>(null);
-
-  const faqs: FAQType[] = [
-    {
-      id: 1,
-      question: "When and where is CUSEC Happening?",
-      answer:
-        "CUSEC 2023 will be held on January 12, 13, & 14 at the Hotel Bonaventure located in Downtown Montreal, QC.",
-    },
-    {
-      id: 2,
-      question:
-        "Where can I find the conference schedule, speakers & sponsors?",
-      answer:
-        "The schedule will be available on the website soon along with our list of speakers and sponsors! We are working around the clock to create the best conference experience for you, promised.",
-    },
-    {
-      id: 3,
-      question: "Who can attend? What are the costs of attending?",
-      answer:
-        "High school, undergraduate and graduate students from all across Canada are all welcome to attend. If you are still registered as a student at an education institution and have not graduated by January 2023, you can buy a student ticket starting at $80. We have always strived to keep the ticket price affordable for students. Otherwise, the professional ticket is for you! We sell professional tickets for a base price of $200.",
-    },
-    {
-      id: 4,
-      question: "How can I get a refund? Can I re-sell my ticket?",
-      answer:
-        "It is strictly forbidden to re-sell a CUSEC ticket above the purchased price. If you cannot attend anymore, reach out to info@cusec.net and CC your head delegate if you have one. We will do our best to assist you. Tickets can only be refunded within 30 days of purchase.",
-    },
-    // {
-    //   id: 5,
-    //   question: "Q",
-    //   answer: "A",
-    // },
-  ];
+  const sponsorsRef = useRef<HTMLDivElement>(null);
+  const faqRef = useRef<HTMLDivElement>(null);
 
   const hoverText = (text: string) => {
     const image: HTMLImageElement = imageRef?.current
@@ -93,6 +101,28 @@ function Home({ sponsorsRef, faqRef }: Props) {
 
     VanillaTilt.init(tilt.current);
   }, []);
+
+  useEffect(() => {
+    if (sponsorScroll && sponsorsRef.current) {
+      window.scrollTo({
+        top: sponsorsRef.current?.offsetTop,
+        behavior: "smooth",
+      });
+
+      setSponsorScroll(false);
+    }
+  }, [sponsorScroll, setSponsorScroll]);
+
+  useEffect(() => {
+    if (faqScroll && faqRef.current) {
+      window.scrollTo({
+        top: faqRef.current?.offsetTop,
+        behavior: "smooth",
+      });
+
+      setFaqScroll(false);
+    }
+  }, [faqScroll, setFaqScroll]);
 
   const [currentImg, setCurrentImg] = useState(IMAGES[0]);
 
@@ -375,7 +405,7 @@ function Home({ sponsorsRef, faqRef }: Props) {
               <span className="Highlight">info@cusec.com</span>
             </p>
           </div>
-          <FAQ faqs={faqs} />
+          <FAQ faqs={FAQS} />
         </div>
       </div>
     </div>
