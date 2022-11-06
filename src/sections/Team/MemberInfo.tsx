@@ -72,6 +72,15 @@ export const speakers: CusecTeam = {
   name: "Speakers Team",
   members: [
     {
+      name: "Camila Martínez Ovando",
+      uni: "University of Manitoba",
+      year: UniYear.Second,
+      major: "Computer Science",
+      quote:
+        "Hey everyone :) My name is Camila and I'm from Bolivia. I'm majoring in Computer Science as I believe that with a computer and lots of creativity, you can do wonders in this world! I enjoy going to the gym and preparing coffee as a barista. I'm looking forward to meeting all of you!",
+      fact: "I eat oatmeal every day and never get tired of it (is too perfect!!)",
+    },
+    {
       name: "Lyka M. Sal-long",
       uni: "University of Manitoba",
       year: UniYear.Third,
@@ -133,6 +142,15 @@ export const promotions: CusecTeam = {
       quote:
         "Hey everybody! I'm Jordon (sounds like Jordan), your friendly neighbourhood promo director. I'm a second year at the University of Manitoba majoring in computer science and minoring in linguistics. I love D&D, Netflix, and listening to music (especially indie, R&B, and kpop). Second time delegate, first time organizer, so I'm very excited to meet new people. If you see me in at the venue and want to chat about music, code, whatever, don't be shy say hi!",
       fact: "I have a Duolingo streak of 272 in Mandarin and Korean (as of Sept 29) but can barely speak either lol",
+    },
+    {
+      name: "Marriane Jane Angga",
+      uni: "Sheridan College",
+      year: UniYear.Second,
+      major: "Interaction Design",
+      quote:
+        "Hi, my name is Marriane and I'm the promotion's designer for CUSEC 2023. I'm currently a 2nd year Interaction Design at Sheridan and I'm passionate about creating interactive experiences.",
+      fact: "I started up a vintage store",
     },
   ],
 };
