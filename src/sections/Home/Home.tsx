@@ -138,10 +138,12 @@ function Home() {
             </Paragraph>
             <Paragraph>January 2022 • In Person</Paragraph>
             <div className="CardButtons">
-              <Button primary inverted>
+              <Button primary inverted onClick={handleJoinUs}>
                 Join us
               </Button>
-              <Button inverted>Sponsor</Button>
+              <Button inverted onClick={handleSponsorMailTo}>
+                Sponsor
+              </Button>
             </div>
           </div>
           <div className="MobileWaves">
