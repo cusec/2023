@@ -9,13 +9,25 @@ interface Props {
   to: To;
   name: string;
   hashLink?: boolean;
+  openPage?: string;
 }
 
-const CusecLink = ({ to, name, hashLink }: Props) => {
+const CusecLink = ({ to, name, hashLink, openPage }: Props) => {
   const resolvedPath = useResolvedPath(to);
   const isActive = useMatch({ path: resolvedPath.pathname, end: true });
-
   const className = classNames("NavItem", isActive ? "Active" : null);
+
+  if (openPage) {
+    const handleSignUp = () => {
+      window.open(openPage, "_blank");
+    };
+
+    return (
+      <p className="NavItem" onClick={handleSignUp}>
+        {name}
+      </p>
+    );
+  }
 
   return (
     <li>
