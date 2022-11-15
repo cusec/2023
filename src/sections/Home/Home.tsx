@@ -311,7 +311,7 @@ function Home() {
           </Paragraph>
         </div>
       </div>
-      <div className="Section CenterText" id="sponsors">
+      <div className="Section CenterText" id="Sponsors">
         <Subtitle>Meet the companies making CUSEC possible.</Subtitle>
         <Paragraph>More to be introduced soon!</Paragraph>
         <div className="SponsorLogos">
@@ -362,7 +362,7 @@ function Home() {
           </div>
         </div>
       </div>
-      <div className="Section" id="faqs">
+      <div className="Section" id="FAQ">
         <div className="SectionContent">
           <div className="CenterText">
             <Subtitle>Frequently Asked Questions</Subtitle>

@@ -10,9 +10,10 @@ interface Props {
   name: string;
   hashLink?: boolean;
   openPage?: string;
+  closeNav?: () => void;
 }
 
-const CusecLink = ({ to, name, hashLink, openPage }: Props) => {
+const CusecLink = ({ to, name, hashLink, openPage, closeNav }: Props) => {
   const resolvedPath = useResolvedPath(to);
   const isActive = useMatch({ path: resolvedPath.pathname, end: true });
   const className = classNames("NavItem", isActive ? "Active" : null);
@@ -30,7 +31,7 @@ const CusecLink = ({ to, name, hashLink, openPage }: Props) => {
   }
 
   return (
-    <li>
+    <li onClick={closeNav}>
       {hashLink ? (
         <HashLink smooth to={`/#${name}`} className="HashLink">
           <p className={className}>{name}</p>

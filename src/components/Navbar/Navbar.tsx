@@ -56,6 +56,7 @@ const Navbar = () => {
         name={name}
         hashLink={hashLink}
         openPage={openPage}
+        closeNav={() => setShowMobileNav(false)}
       />
     );
   });
