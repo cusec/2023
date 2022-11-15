@@ -27,7 +27,11 @@ const Navbar = () => {
     // { name: "Speakers", link: "/speakers" },
     { name: "Team", link: "/team" },
     { name: "FAQ", link: "/faq", hashLink: true },
-    { name: "Sign Up", link: "/signup" },
+    {
+      name: "Sign Up",
+      link: "",
+      openPage: "https://forms.gle/rWDZNRreFYGVqGP76",
+    },
   ];
 
   const className = classNames(
@@ -44,8 +48,16 @@ const Navbar = () => {
     window.open("https://forms.gle/rWDZNRreFYGVqGP76", "_blank");
   };
 
-  const navbarLinks = links.map(({ link, name, hashLink }) => {
-    return <CusecLink key={name} to={link} name={name} hashLink={hashLink} />;
+  const navbarLinks = links.map(({ link, name, hashLink, openPage }) => {
+    return (
+      <CusecLink
+        key={name}
+        to={link}
+        name={name}
+        hashLink={hashLink}
+        openPage={openPage}
+      />
+    );
   });
 
   return (
