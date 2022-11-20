@@ -22,6 +22,7 @@ import morganStanleyLogo from "../../assets/morganStanleyLogo.png";
 import nokiaLogo from "../../assets/nokiaLogo.jpg";
 import stickerMuleLogo from "../../assets/stickerMuleLogo.png";
 import rbcLogo from "../../assets/rbcLogo.png";
+import deloitteLogo from "../../assets/deloitteLogo.png";
 import "./Home.scss";
 
 const IMAGES = [learnImage, connectImage, discoverImage];
@@ -328,6 +329,7 @@ function Home() {
           </div>
           <div className="SponsorBronze">
             <img src={nokiaLogo} height="auto" alt="Nokia Logo" />
+            <img src={deloitteLogo} height="auto" alt="Deloitte Logo" />
           </div>
           <div className="SponsorInKind">
             <img src={stickerMuleLogo} height="auto" alt="Sticker Mule Logo" />
