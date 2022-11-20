@@ -105,7 +105,11 @@ function Home() {
   };
 
   const handleSponsorMailTo = () => {
-    window.open("mailto:info@cusec.net");
+    window.open("mailto:info@cusec.net", "_blank");
+  };
+
+  const handleSponsorLink = (link: string) => {
+    window.open(link);
   };
 
   return (
@@ -326,15 +330,53 @@ function Home() {
               src={morganStanleyLogo}
               height="auto"
               alt="Morgan Stanley Logo"
+              className="Clickable"
+              onClick={() =>
+                handleSponsorLink(
+                  "https://morganstanley.tal.net/vx/candidate/apply/12953"
+                )
+              }
             />
           </div>
           <div className="SponsorBronze">
-            <img src={nokiaLogo} height="auto" alt="Nokia Logo" />
-            <img src={deloitteLogo} height="auto" alt="Deloitte Logo" />
+            <img
+              src={nokiaLogo}
+              height="auto"
+              alt="Nokia Logo"
+              className="Clickable"
+              onClick={() => handleSponsorLink("http://www.nokia.com/")}
+            />
+            <img
+              src={deloitteLogo}
+              height="auto"
+              alt="Deloitte Logo"
+              className="Clickable"
+              onClick={() =>
+                handleSponsorLink(
+                  "https://www2.deloitte.com/ca/en/pages/careers/topics/students.html"
+                )
+              }
+            />
           </div>
           <div className="SponsorInKind">
-            <img src={stickerMuleLogo} height="auto" alt="Sticker Mule Logo" />
-            <img src={voiceflowLogo} height="auto" alt="Voiceflow Logo" />
+            <img
+              src={stickerMuleLogo}
+              height="auto"
+              alt="Sticker Mule Logo"
+              className="Clickable"
+              onClick={() => handleSponsorLink("https://mule.to/p3a7")}
+            />
+            <img
+              src={voiceflowLogo}
+              height="auto"
+              alt="Voiceflow Logo"
+              className="Clickable"
+              onClick={() =>
+                handleSponsorLink(
+                  "http://www.voiceflow.com/hackathon/canadianuniveristysoftwareengineeringconference2022"
+                )
+              }
+            />
           </div>
         </div>
       </div>
