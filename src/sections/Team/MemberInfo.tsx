@@ -96,6 +96,15 @@ export const technology: CusecTeam = {
   name: "Technology Team",
   members: [
     {
+      name: "Abdul-Hakim Skaik",
+      uni: "Concordia University",
+      year: UniYear.Second,
+      major: "Software Engineering",
+      quote:
+        "Hello everyone! Im excited to join CUSEC this year as the head delegate of Concordia! I also helped in developing CUSEC 2023 website! I love coding, I love meeting people, and I love exploring, if we have any of these three in common, feel free to connect with me on LinkedIn!",
+      fact: "I don't sleep without tiktok",
+    },
+    {
       name: "Danielle D'Souza",
       uni: "University of Waterloo",
       year: UniYear.Third,
@@ -158,15 +167,6 @@ export const promotions: CusecTeam = {
 export const headDelegates: CusecTeam = {
   name: "Head Delegates",
   members: [
-    {
-      name: "Abdul-Hakim Skaik",
-      uni: "Concordia University",
-      year: UniYear.Second,
-      major: "Software Engineering ",
-      quote:
-        "Hello everyone! My name is Hakim. This is my first year @ CUSEC and I'm excited to be the head delegate of Concordia. I consider myself to be a cool person...or at least I'd like to think so. Feel free to connect with me and have a coffee chat so we can be cool together Ü.",
-      fact: "I don't sleep without tiktok",
-    },
     {
       name: "Anjali Patel",
       uni: "Carleton University",
