@@ -23,6 +23,7 @@ import nokiaLogo from "../../assets/nokiaLogo.jpg";
 import stickerMuleLogo from "../../assets/stickerMuleLogo.png";
 import rbcLogo from "../../assets/rbcLogo.png";
 import deloitteLogo from "../../assets/deloitteLogo.png";
+import voiceflowLogo from "../../assets/voiceflowLogo.png";
 import "./Home.scss";
 
 const IMAGES = [learnImage, connectImage, discoverImage];
@@ -333,6 +334,7 @@ function Home() {
           </div>
           <div className="SponsorInKind">
             <img src={stickerMuleLogo} height="auto" alt="Sticker Mule Logo" />
+            <img src={voiceflowLogo} height="auto" alt="Voiceflow Logo" />
           </div>
         </div>
       </div>
