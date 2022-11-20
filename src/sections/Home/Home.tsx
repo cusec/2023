@@ -19,7 +19,7 @@ import groupImage3 from "../../assets/CUSEC3.jpg";
 import mobileHome from "../../assets/mobileHome.svg";
 import mobileWaves from "../../assets/mobileWaves.svg";
 import morganStanleyLogo from "../../assets/morganStanleyLogo.png";
-import nokiaLogo from "../../assets/nokiaLogo.jpg";
+import nokiaLogo from "../../assets/nokiaLogo.png";
 import stickerMuleLogo from "../../assets/stickerMuleLogo.png";
 import rbcLogo from "../../assets/rbcLogo.png";
 import deloitteLogo from "../../assets/deloitteLogo.png";
