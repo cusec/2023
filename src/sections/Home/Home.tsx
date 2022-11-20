@@ -21,6 +21,7 @@ import mobileWaves from "../../assets/mobileWaves.svg";
 import morganStanleyLogo from "../../assets/morganStanleyLogo.png";
 import nokiaLogo from "../../assets/nokiaLogo.jpg";
 import stickerMuleLogo from "../../assets/stickerMuleLogo.png";
+import rbcLogo from "../../assets/rbcLogo.png";
 import "./Home.scss";
 
 const IMAGES = [learnImage, connectImage, discoverImage];
@@ -315,6 +316,9 @@ function Home() {
         <Subtitle>Meet the companies making CUSEC possible.</Subtitle>
         <Paragraph>More to be introduced soon!</Paragraph>
         <div className="SponsorLogos">
+          <div className="SponsorGold">
+            <img src={rbcLogo} height="auto" alt="RBC Logo" />
+          </div>
           <div className="SponsorSilver">
             <img
               src={morganStanleyLogo}
