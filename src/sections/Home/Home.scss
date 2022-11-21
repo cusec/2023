@@ -193,7 +193,7 @@
 
 .SponsorLogos {
   img {
-    padding-top: 20px;
+    padding-top: 10px;
     padding-left: 10px;
   }
 
@@ -214,8 +214,18 @@
     width: 15%;
   }
 
-  .SponsorInKind > img {
-    width: 7%;
+  .SponsorInKind {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      width: 10%;
+
+      &:not(:first-child) {
+        padding-left: 30px;
+      }
+    }
   }
 }
 
