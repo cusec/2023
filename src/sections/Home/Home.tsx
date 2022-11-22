@@ -51,7 +51,7 @@ const FAQS: FAQType[] = [
     id: 4,
     question: "How can I get a refund? Can I re-sell my ticket?",
     answer:
-      "It is strictly forbidden to re-sell a CUSEC ticket above the purchased price. If you cannot attend anymore, reach out to info@cusec.net and CC your head delegate if you have one. We will do our best to assist you. Tickets can only be refunded within 30 days of purchase.",
+      "CUSEC tickets are final sale and cannot be refunded. It is strictly forbidden to re-sell a CUSEC ticket above the purchased price. If you cannot attend anymore, reach out to info@cusec.net and CC your head delegate if you have one. We will do our best to assist you.",
   },
   // {
   //   id: 5,
@@ -101,7 +101,7 @@ function Home() {
   ));
 
   const handleJoinUs = () => {
-    window.open("https://forms.gle/rWDZNRreFYGVqGP76", "_blank");
+    window.open("https://guestlist.co/events/731082", "_blank");
   };
 
   const handleSponsorMailTo = () => {
