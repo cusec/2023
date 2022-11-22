@@ -30,7 +30,7 @@ const Navbar = () => {
     {
       name: "Sign Up",
       link: "",
-      openPage: "https://forms.gle/rWDZNRreFYGVqGP76",
+      openPage: "https://guestlist.co/events/731082",
     },
   ];
 
@@ -45,7 +45,7 @@ const Navbar = () => {
   );
 
   const handleSignUp = () => {
-    window.open("https://forms.gle/rWDZNRreFYGVqGP76", "_blank");
+    window.open("https://guestlist.co/events/731082", "_blank");
   };
 
   const navbarLinks = links.map(({ link, name, hashLink, openPage }) => {
