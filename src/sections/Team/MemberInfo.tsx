@@ -62,7 +62,7 @@ export const sponsorship: CusecTeam = {
       year: UniYear.Third,
       major: "Computer Science",
       quote:
-        "Procrastination: I wanted to do work, but y PC said League. - Kha Pham, League Addict, Flautist, Music Arranger, Photographer, PC Master Race-er, Computer Scientist, Potentially Crazy Man. Erm. Not in that order.",
+        "Procrastination: I wanted to do work, but my PC said League. - Kha Pham, League Addict, Flautist, Music Arranger, Photographer, PC Master Race-er, Computer Scientist, Potentially Crazy Man. Erm. Not in that order.",
       fact: "I’ve arranged a piece of music that has won awards at a performance show.",
     },
   ],
