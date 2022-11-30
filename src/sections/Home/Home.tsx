@@ -418,7 +418,7 @@ function Home() {
             <Subtitle>Frequently Asked Questions</Subtitle>
             <p className="FaqHelpText">
               Can't find what you're looking for? Send us an email at{" "}
-              <span className="Highlight">info@cusec.com</span>
+              <span className="Highlight">info@cusec.net</span>
             </p>
           </div>
           <FAQ faqs={FAQS} />
