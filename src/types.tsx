@@ -1,3 +1,5 @@
+import { ReactElement } from "react";
+
 export enum Stagger {
   Top = "top",
   Bottom = "bottom",
@@ -6,7 +8,7 @@ export enum Stagger {
 export type FAQType = {
   id: number;
   question: string;
-  answer: string;
+  answer: ReactElement | string;
 };
 
 export enum UniYear {

@@ -28,38 +28,6 @@ import "./Home.scss";
 
 const IMAGES = [learnImage, connectImage, discoverImage];
 
-const FAQS: FAQType[] = [
-  {
-    id: 1,
-    question: "When and where is CUSEC Happening?",
-    answer:
-      "CUSEC 2023 will be held on January 12, 13, & 14 at the Hotel Bonaventure located in Downtown Montreal, QC.",
-  },
-  {
-    id: 2,
-    question: "Where can I find the conference schedule, speakers & sponsors?",
-    answer:
-      "The schedule will be available on the website soon along with our list of speakers and sponsors! We are working around the clock to create the best conference experience for you, promised.",
-  },
-  {
-    id: 3,
-    question: "Who can attend? What are the costs of attending?",
-    answer:
-      "High school, undergraduate and graduate students from all across Canada are all welcome to attend. If you are still registered as a student at an education institution and have not graduated by January 2023, you can buy a student ticket starting at $80. We have always strived to keep the ticket price affordable for students. Otherwise, the professional ticket is for you! We sell professional tickets for a base price of $200.",
-  },
-  {
-    id: 4,
-    question: "How can I get a refund? Can I re-sell my ticket?",
-    answer:
-      "CUSEC tickets are final sale and cannot be refunded. It is strictly forbidden to re-sell a CUSEC ticket above the purchased price. If you cannot attend anymore, reach out to info@cusec.net and CC your head delegate if you have one. We will do our best to assist you.",
-  },
-  // {
-  //   id: 5,
-  //   question: "Q",
-  //   answer: "A",
-  // },
-];
-
 function Home() {
   const tilt = useRef<HTMLDivElement>(null);
   const imageRef = useRef<HTMLDivElement>(null);
@@ -112,6 +80,62 @@ function Home() {
     window.open(link);
   };
 
+  const handleBookHotel = () => {
+    window.open(
+      "https://bookings.travelclick.com/97993?groupID=3716965#/guestsandrooms",
+      "_blank"
+    );
+  };
+
+  const FAQS: FAQType[] = [
+    {
+      id: 1,
+      question: "When and where is CUSEC Happening?",
+      answer:
+        "CUSEC 2023 will be held on January 12, 13, & 14 at the Hotel Bonaventure located in Downtown Montreal, QC.",
+    },
+    {
+      id: 2,
+      question:
+        "Where can I find the conference schedule, speakers & sponsors?",
+      answer:
+        "The schedule will be available on the website soon along with our list of speakers and sponsors! We are working around the clock to create the best conference experience for you, promised.",
+    },
+    {
+      id: 3,
+      question: "Who can attend? What are the costs of attending?",
+      answer:
+        "High school, undergraduate and graduate students from all across Canada are all welcome to attend. If you are still registered as a student at an education institution and have not graduated by January 2023, you can buy a student ticket starting at $80. We have always strived to keep the ticket price affordable for students. Otherwise, the professional ticket is for you! We sell professional tickets for a base price of $200.",
+    },
+    {
+      id: 4,
+      question: "Where should I book rooms?",
+      answer: (
+        <p>
+          You should book through our link which Hotel Bonaventure has provided
+          so delegates can access discounted rates. You can book with this{" "}
+          <span className="Highlight HotelLink" onClick={handleBookHotel}>
+            link
+          </span>
+          . We recommend booking a Quad Room to access the cheapest rate. If
+          you're looking for delegates to share a room with send us an email at
+          info@cusec.net.
+        </p>
+      ),
+    },
+    {
+      id: 5,
+      question: "How can I get a refund? Can I re-sell my ticket?",
+      answer:
+        "CUSEC tickets are final sale and cannot be refunded. It is strictly forbidden to re-sell a CUSEC ticket above the purchased price. If you cannot attend anymore, reach out to info@cusec.net and CC your head delegate if you have one. We will do our best to assist you.",
+    },
+    // {
+    //   id: 6,
+    //   question: "Q",
+    //   answer: "A",
+    // },
+  ];
+
   return (
     <div className="Home">
       <div className="Container HideOnMobile">
@@ -119,8 +143,8 @@ function Home() {
           <div className="Content" ref={tilt}>
             <Subtitle showLogo>CUSEC 2023</Subtitle>
             <Paragraph className="CardText">
-              Canadian University Software Engineering Conference January 2023 •
-              In Person
+              Canadian University Software Engineering Conference January 12-14,
+              2023 • In Person
             </Paragraph>
             <div className="CardButtons">
               <Button primary onClick={handleJoinUs}>
