@@ -164,6 +164,15 @@
   }
 }
 
+.HotelLink {
+  font-weight: bold;
+
+  &:hover {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+}
+
 .AboutSubtitle {
   margin-bottom: 50px;
 }

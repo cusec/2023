@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { ReactElement, useState } from "react";
 import type { FAQType } from "../../../../types";
 import "./Faq.scss";
 
@@ -16,7 +16,7 @@ interface QuestionProps {
 interface AnswerProps {
   id: string;
   open: boolean;
-  children: string;
+  children: ReactElement | string;
 }
 
 export const Question = ({ open, id, children, onToggle }: QuestionProps) => {
