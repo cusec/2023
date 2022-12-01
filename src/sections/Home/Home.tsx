@@ -49,12 +49,18 @@ const FAQS: FAQType[] = [
   },
   {
     id: 4,
+    question: "Where should I book rooms?",
+    answer:
+      "You should book through our link which Hotel Bonaventure has provided so delegates can access discounted rates. You can book with this link. We recommend booking a Quad Room to access the cheapest rate. If you're looking for delegates to share a room with send us an email at info@cusec.net.",
+  },
+  {
+    id: 5,
     question: "How can I get a refund? Can I re-sell my ticket?",
     answer:
       "CUSEC tickets are final sale and cannot be refunded. It is strictly forbidden to re-sell a CUSEC ticket above the purchased price. If you cannot attend anymore, reach out to info@cusec.net and CC your head delegate if you have one. We will do our best to assist you.",
   },
   // {
-  //   id: 5,
+  //   id: 6,
   //   question: "Q",
   //   answer: "A",
   // },
@@ -119,8 +125,8 @@ function Home() {
           <div className="Content" ref={tilt}>
             <Subtitle showLogo>CUSEC 2023</Subtitle>
             <Paragraph className="CardText">
-              Canadian University Software Engineering Conference January 2023 •
-              In Person
+              Canadian University Software Engineering Conference January 12-14,
+              2023 • In Person
             </Paragraph>
             <div className="CardButtons">
               <Button primary onClick={handleJoinUs}>
