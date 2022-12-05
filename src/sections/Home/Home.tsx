@@ -24,6 +24,8 @@ import stickerMuleLogo from "../../assets/stickerMuleLogo.png";
 import rbcLogo from "../../assets/rbcLogo.png";
 import deloitteLogo from "../../assets/deloitteLogo.png";
 import voiceflowLogo from "../../assets/voiceflowLogo.png";
+import accentureLogo from "../../assets/accentureLogo.png";
+import cseLogo from "../../assets/cseLogo.png";
 import "./Home.scss";
 
 const IMAGES = [learnImage, connectImage, discoverImage];
@@ -378,6 +380,26 @@ function Home() {
               onClick={() =>
                 handleSponsorLink(
                   "https://www2.deloitte.com/ca/en/pages/careers/topics/students.html"
+                )
+              }
+            />
+            <img
+              src={accentureLogo}
+              height="auto"
+              alt="Accenture Logo"
+              className="Clickable"
+              onClick={() =>
+                handleSponsorLink("https://www.accenture.com/ca-en/careers")
+              }
+            />
+            <img
+              src={cseLogo}
+              height="auto"
+              alt="Communications Security Establishment Logo"
+              className="Clickable"
+              onClick={() =>
+                handleSponsorLink(
+                  "https://www.cse-cst.gc.ca/en/careers/student-opportunities"
                 )
               }
             />
