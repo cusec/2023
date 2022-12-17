@@ -82,9 +82,16 @@ function Home() {
     window.open(link);
   };
 
-  const handleBookHotel = () => {
+  const handleEnglishLink = () => {
     window.open(
-      "https://bookings.travelclick.com/97993?groupID=3716965#/guestsandrooms",
+      "https://reservations.travelclick.com/97993?groupID=3716965",
+      "_blank"
+    );
+  };
+
+  const handleFrenchLink = () => {
+    window.open(
+      "https://reservations.travelclick.com/97993?groupID=3716965&languageID=3",
       "_blank"
     );
   };
@@ -106,23 +113,57 @@ function Home() {
     {
       id: 3,
       question: "Who can attend? What are the costs of attending?",
-      answer:
-        "High school, undergraduate and graduate students from all across Canada are all welcome to attend. If you are still registered as a student at an education institution and have not graduated by January 2023, you can buy a student ticket starting at $80. We have always strived to keep the ticket price affordable for students. Otherwise, the professional ticket is for you! We sell professional tickets for a base price of $200.",
+      answer: (
+        <>
+          <p>
+            All undergraduate and graduate students in Canada are welcome to
+            attend! We strive to keep the ticket prices affordable for students.
+            If you are still registered as a student at a Canadian educational
+            institution and have not graduated by January 2023, you can buy a
+            student ticket start $80. Otherwise, the professional ticket is for
+            you! We sell professional tickets for a base price of $200.
+          </p>
+          <p>
+            We have special rates for delegates staying at the conference venue,
+            the Hotel Bonaventure. These rates can be split among the guests of
+            the room. Single or Double capacity are $144/room/night. Triple or
+            Quad capacity are $149/room/night.
+          </p>
+          <p>
+            Please note that tickets do not cover the costs of staying at the
+            hotel venue, or travel to the conference. For more information about
+            accommodations visit the booking section below. For travel options,
+            contact your closest Head Delegate or info@cusec.net.
+          </p>
+        </>
+      ),
     },
     {
       id: 4,
       question: "Where should I book rooms?",
       answer: (
-        <p>
-          You should book through our link which Hotel Bonaventure has provided
-          so delegates can access discounted rates. You can book with this{" "}
-          <span className="Highlight HotelLink" onClick={handleBookHotel}>
-            link
-          </span>
-          . We recommend booking a Quad Room to access the cheapest rate. If
-          you're looking for delegates to share a room with send us an email at
-          info@cusec.net.
-        </p>
+        <>
+          <p>
+            You can book a room at the hotel venue through our link which Hotel
+            Bonaventure has provided so delegates can access discounted rates.
+            For booking in English, you can visit this{" "}
+            <span className="Highlight FaqLink" onClick={handleEnglishLink}>
+              link
+            </span>
+            ; for booking in French, visit this{" "}
+            <span className="Highlight FaqLink" onClick={handleFrenchLink}>
+              link
+            </span>
+            .
+          </p>
+          <p>
+            We recommend booking a Quad Room to access the cheapest rate. If you
+            are looking for delegates to share a room with, find your Head
+            Delegate in the Team page and reach out! If you don’t have a Head
+            Delegate, contact us at info@cusec.net and we will help connect you
+            with one of them.
+          </p>
+        </>
       ),
     },
     {
