@@ -163,6 +163,10 @@ function Home() {
             Delegate, contact us at info@cusec.net and we will help connect you
             with one of them.
           </p>
+          <p>
+            In order to access our special rates, please reserve your room by
+            Dec 20 11:59 PM (ET).
+          </p>
         </>
       ),
     },
