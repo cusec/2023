@@ -27,6 +27,7 @@ import voiceflowLogo from "../../assets/voiceflowLogo.png";
 import accentureLogo from "../../assets/accentureLogo.png";
 import cseLogo from "../../assets/cseLogo.png";
 import "./Home.scss";
+import SponsorshipPackage from "../../Sponsorship-Package.pdf";
 
 const IMAGES = [learnImage, connectImage, discoverImage];
 
@@ -176,8 +177,30 @@ function Home() {
       answer:
         "CUSEC tickets are final sale and cannot be refunded. It is strictly forbidden to re-sell a CUSEC ticket above the purchased price. If you cannot attend anymore, reach out to info@cusec.net and CC your head delegate if you have one. We will do our best to assist you.",
     },
+    {
+      id: 6,
+      question:
+        "Where can I get more information about the sponsor experience?",
+      answer: (
+        <p>
+          We have created a package summarizing everything sponsors might need
+          to know about the conference! Download it{" "}
+          <span className="FaqLink">
+            <a
+              href={SponsorshipPackage}
+              download="SponsorshipPackage"
+              target="_blank"
+              className="Highlight"
+            >
+              here
+            </a>
+          </span>
+          .
+        </p>
+      ),
+    },
     // {
-    //   id: 6,
+    //   id: 7,
     //   question: "Q",
     //   answer: "A",
     // },
