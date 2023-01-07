@@ -36,7 +36,6 @@ function CodeOfConduct() {
           gender-neutral pronouns when uncertain.
         </li>
       </ul>
-
       <p>Examples of unacceptable behaviour by participants include:</p>
       <ul>
         <li>
@@ -82,9 +81,7 @@ function CodeOfConduct() {
           inappropriate in a professional setting.
         </li>
       </ul>
-
       <p className="Bold">Enforcement</p>
-
       <p>
         Violations of the Code of Conduct may be reported by sending an email to
         incidents@cusec.net. All reports will be reviewed and investigated and
@@ -95,6 +92,26 @@ function CodeOfConduct() {
         Conduct, or to ban temporarily or permanently any members for other
         behaviours that they deem inappropriate, threatening, offensive, or
         harmful.
+      </p>
+      <p>
+        Conference staff will be happy to help participants contact hotel/venue
+        security or local law enforcement, provide escorts, or otherwise assist
+        those experiencing harassment to feel safe for the duration of the
+        conference. We value your attendance. We expect participants to follow
+        these rules at the conference venue as well as any conference-related
+        social events.
+      </p>
+      <p>
+        <span className="Bold">Email Address:</span> incidents@cusec.net
+      </p>
+      <p>
+        <span className="Bold">
+          Non-Emergency Local Law Enforcement (SPVM):
+        </span>
+        +1 (514) 280 - 2222
+      </p>
+      <p>
+        <span className="Bold">Emergency and Urgent Calls:</span> 911
       </p>
     </div>
   );
