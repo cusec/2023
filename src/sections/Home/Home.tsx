@@ -96,6 +96,13 @@ function Home() {
     );
   };
 
+  const handleScheduleLink = () => {
+    window.open(
+      "https://calendar.google.com/calendar/u/3?cid=Y3VzZWMubmV0X2syZ2Q2a2l2Y2RrcjRvMG8zbmtna2U2aGNvQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20",
+      "_blank"
+    );
+  };
+
   const FAQS: FAQType[] = [
     {
       id: 1,
@@ -105,10 +112,20 @@ function Home() {
     },
     {
       id: 2,
-      question:
-        "Where can I find the conference schedule, speakers & sponsors?",
-      answer:
-        "The schedule will be available on the website soon along with our list of speakers and sponsors! We are working around the clock to create the best conference experience for you, promised.",
+      question: "Where can I find the conference schedule and speakers?",
+      answer: (
+        <p>
+          The schedule page will be available on the website soon along with our
+          list of speakers. You can subscribe to the conference schedule on
+          Google Calendar to receive notifications for events and view the event
+          schedule and any changes in real time. To add the calendar to your
+          browser, please click{" "}
+          <span className="Highlight FaqLink" onClick={handleScheduleLink}>
+            here
+          </span>
+          .
+        </p>
+      ),
     },
     {
       id: 3,
