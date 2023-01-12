@@ -9,6 +9,7 @@ import {
 } from "../../components";
 import {
   handleScheduleLink,
+  handleDownloadSchedule,
   handleEnglishLink,
   handleFrenchLink,
   handleSponsorLink,
@@ -89,11 +90,14 @@ function Home() {
       question: "Where can I find the conference schedule and speakers?",
       answer: (
         <p>
-          The schedule page will be available on the website soon along with our
-          list of speakers. You can subscribe to the conference schedule on
-          Google Calendar to receive notifications for events and view the event
-          schedule and any changes in real time. To add the calendar to your
-          browser, please click{" "}
+          View a PDF version{" "}
+          <span className="Highlight FaqLink" onClick={handleDownloadSchedule}>
+            here
+          </span>
+          ! You can also subscribe to the conference schedule on Google Calendar
+          to receive notifications for events and view the event schedule and
+          any changes in real time. To add the calendar to your browser, please
+          click{" "}
           <span className="Highlight FaqLink" onClick={handleScheduleLink}>
             here
           </span>
@@ -185,7 +189,7 @@ function Home() {
               2023 • In Person
             </Paragraph>
             <div className="CardButtons">
-              <Button primary onClick={handleScheduleLink}>
+              <Button primary onClick={handleDownloadSchedule}>
                 Schedule
               </Button>
               <Button onClick={handleSponsorMailTo}>Sponsor</Button>
@@ -207,7 +211,7 @@ function Home() {
             </Paragraph>
             <Paragraph>January 2022 • In Person</Paragraph>
             <div className="CardButtons">
-              <Button primary inverted onClick={handleScheduleLink}>
+              <Button primary inverted onClick={handleDownloadSchedule}>
                 Schedule
               </Button>
               <Button inverted onClick={handleSponsorMailTo}>
