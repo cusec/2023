@@ -22,6 +22,12 @@ const Navbar = () => {
 
   const links = [
     { name: "Home", link: "/" },
+    {
+      name: "Schedule",
+      link: "",
+      openPage:
+        "https://drive.google.com/file/d/1H7yhYAeNUe15r0R5WV7cgjf0uLmCC1sP/view?usp=sharing",
+    },
     { name: "Sponsors", link: "/sponsors", hashLink: true },
     { name: "Team", link: "/team" },
     { name: "FAQ", link: "/faq", hashLink: true },
