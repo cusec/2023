@@ -171,11 +171,12 @@ function Home() {
       answer:
         "CUSEC tickets are final sale and cannot be refunded. It is strictly forbidden to re-sell a CUSEC ticket above the purchased price. If you cannot attend anymore, reach out to info@cusec.net and CC your head delegate if you have one. We will do our best to assist you.",
     },
-    // {
-    //   id: 6,
-    //   question: "Q",
-    //   answer: "A",
-    // },
+    {
+      id: 6,
+      question: "Who do I contact to notify about any incidents?",
+      answer:
+        "Feel free to email incidents@cusec.net and we will get back to you as soon as we can!",
+    },
   ];
 
   return (
