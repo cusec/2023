@@ -173,7 +173,8 @@ function Home() {
     },
     {
       id: 6,
-      question: "Who do I contact to notify about any incidents?",
+      question:
+        "Who do I contact to notify about any incidents (if you need help or see someone breaking the Code of Conduct)?",
       answer:
         "Feel free to email incidents@cusec.net and we will get back to you as soon as we can!",
     },
