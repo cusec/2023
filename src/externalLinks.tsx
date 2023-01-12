@@ -1,7 +1,3 @@
-export const handleJoinUs = () => {
-  window.open("https://guestlist.co/events/731082", "_blank");
-};
-
 export const handleSponsorMailTo = () => {
   window.open("mailto:info@cusec.net", "_blank");
 };
