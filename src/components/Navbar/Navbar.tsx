@@ -22,9 +22,7 @@ const Navbar = () => {
 
   const links = [
     { name: "Home", link: "/" },
-    // { name: "Schedule", link: "/schedule" },
     { name: "Sponsors", link: "/sponsors", hashLink: true },
-    // { name: "Speakers", link: "/speakers" },
     { name: "Team", link: "/team" },
     { name: "FAQ", link: "/faq", hashLink: true },
     {
