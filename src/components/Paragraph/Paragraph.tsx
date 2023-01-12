@@ -26,7 +26,11 @@ const Paragraph = ({ inline, bold, className, children, onHover }: Props) => {
     );
   }
 
-  return <p className={styles} onMouseEnter={() => hover(children)}>{children}</p>;
+  return (
+    <p className={styles} onMouseEnter={() => hover(children)}>
+      {children}
+    </p>
+  );
 };
 
 export default Paragraph;

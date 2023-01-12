@@ -7,6 +7,13 @@ import {
   Image,
   // InteractiveButton,
 } from "../../components";
+import {
+  handleScheduleLink,
+  handleEnglishLink,
+  handleFrenchLink,
+  handleSponsorLink,
+  handleSponsorMailTo,
+} from "../../externalLinks";
 import { PricingCard, FAQ } from "./components";
 import { Stagger, FAQType } from "../../types";
 // import impactImg from "../../assets/impact.jpg";
@@ -69,39 +76,6 @@ function Home() {
       onClick={() => setCurrentImg(img)}
     ></i>
   ));
-
-  const handleJoinUs = () => {
-    window.open("https://guestlist.co/events/731082", "_blank");
-  };
-
-  const handleSponsorMailTo = () => {
-    window.open("mailto:info@cusec.net", "_blank");
-  };
-
-  const handleSponsorLink = (link: string) => {
-    window.open(link);
-  };
-
-  const handleEnglishLink = () => {
-    window.open(
-      "https://reservations.travelclick.com/97993?groupID=3716965",
-      "_blank"
-    );
-  };
-
-  const handleFrenchLink = () => {
-    window.open(
-      "https://reservations.travelclick.com/97993?groupID=3716965&languageID=3",
-      "_blank"
-    );
-  };
-
-  const handleScheduleLink = () => {
-    window.open(
-      "https://calendar.google.com/calendar/u/3?cid=Y3VzZWMubmV0X2syZ2Q2a2l2Y2RrcjRvMG8zbmtna2U2aGNvQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20",
-      "_blank"
-    );
-  };
 
   const FAQS: FAQType[] = [
     {
@@ -211,8 +185,8 @@ function Home() {
               2023 • In Person
             </Paragraph>
             <div className="CardButtons">
-              <Button primary onClick={handleJoinUs}>
-                Join us
+              <Button primary onClick={handleScheduleLink}>
+                Schedule
               </Button>
               <Button onClick={handleSponsorMailTo}>Sponsor</Button>
             </div>
@@ -233,8 +207,8 @@ function Home() {
             </Paragraph>
             <Paragraph>January 2022 • In Person</Paragraph>
             <div className="CardButtons">
-              <Button primary inverted onClick={handleJoinUs}>
-                Join us
+              <Button primary inverted onClick={handleScheduleLink}>
+                Schedule
               </Button>
               <Button inverted onClick={handleSponsorMailTo}>
                 Sponsor
