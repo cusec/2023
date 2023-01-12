@@ -1,12 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import VanillaTilt from "vanilla-tilt";
-import {
-  Button,
-  Subtitle,
-  Paragraph,
-  Image,
-  // InteractiveButton,
-} from "../../components";
+import { Button, Subtitle, Paragraph, Image } from "../../components";
 import {
   handleScheduleLink,
   handleDownloadSchedule,
@@ -17,7 +11,6 @@ import {
 } from "../../externalLinks";
 import { PricingCard, FAQ } from "./components";
 import { Stagger, FAQType } from "../../types";
-// import impactImg from "../../assets/impact.jpg";
 import connectImage from "../../assets/Connect.jpg";
 import learnImage from "../../assets/Learn.jpg";
 import discoverImage from "../../assets/Discover.jpg";
@@ -171,11 +164,6 @@ function Home() {
       answer:
         "CUSEC tickets are final sale and cannot be refunded. It is strictly forbidden to re-sell a CUSEC ticket above the purchased price. If you cannot attend anymore, reach out to info@cusec.net and CC your head delegate if you have one. We will do our best to assist you.",
     },
-    // {
-    //   id: 6,
-    //   question: "Q",
-    //   answer: "A",
-    // },
   ];
 
   return (
@@ -308,32 +296,6 @@ function Home() {
           <div className="Circles">{circles}</div>
         </div>
       </div>
-      {/* <div className="Section InlineSection List HideOnMobile">
-        <div className="SectionContent">
-          <div className="SectionAssets">
-            <Subtitle>Our Impact</Subtitle>
-          </div>
-          <ol>
-            <li>
-              <Paragraph inline>Lorem ipsum dolor sit amet</Paragraph>
-            </li>
-            <li>
-              <Paragraph inline>
-                Lorem ipsum dolor sit amet, consectetur
-              </Paragraph>
-            </li>
-            <li>
-              <Paragraph inline>Lorem ipsum dolor sit amet</Paragraph>
-            </li>
-          </ol>
-          <div className="SectionAssets">
-            <InteractiveButton link="http://www.google.com" text="Connect" />
-          </div>
-        </div>
-        <div className="SectionImage">
-          <Image src={impactImg} alt="Nature image" />
-        </div>
-      </div> */}
       <div className="Section HideOnMobile">
         <div className="AboutSubtitle">
           <Subtitle>What is CUSEC?</Subtitle>
