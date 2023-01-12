@@ -30,3 +30,10 @@ export const handleScheduleLink = () => {
     "_blank"
   );
 };
+
+export const handleDownloadSchedule = () => {
+  window.open(
+    "https://drive.google.com/file/d/1H7yhYAeNUe15r0R5WV7cgjf0uLmCC1sP/view?usp=sharing",
+    "_blank"
+  );
+};
